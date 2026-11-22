@@ -1,0 +1,538 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Mon profil | CommuneConnect</title>
+
+        <link rel="stylesheet" href="../../css/reset.css" />
+        <link rel="stylesheet" href="../../css/variables.css" />
+        <link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/responsive.css" />
+        <link rel="stylesheet" href="../../css/components/sidebar.css" />
+        <link rel="stylesheet" href="../../css/components/header.css" />
+        <link rel="stylesheet" href="../../css/components/buttons.css" />
+        <link rel="stylesheet" href="../../css/components/forms.css" />
+        <link rel="stylesheet" href="../../css/pages/citoyen.css" />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+    </head>
+
+    <body class="citizen-page">
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-logo">
+                <a href="../../index.html">
+                    <span class="logo-icon">CC</span>
+                    <span class="logo-text">CommuneConnect</span>
+                </a>
+            </div>
+
+            <nav class="sidebar-navigation">
+                <p class="sidebar-section-title">MENU PRINCIPAL</p>
+
+                <a href="tableau-de-bord.html" class="sidebar-link">
+                    <i class="fa-solid fa-gauge-high"></i>
+                    <span>Tableau de bord</span>
+                </a>
+
+                <a href="nouvelle-demande.html" class="sidebar-link">
+                    <i class="fa-solid fa-file-circle-plus"></i>
+                    <span>Nouvelle demande</span>
+                </a>
+
+                <a href="suivi-demandes.html" class="sidebar-link">
+                    <i class="fa-solid fa-list-check"></i>
+                    <span>Mes demandes</span>
+                </a>
+
+                <a href="mes-documents.html" class="sidebar-link">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span>Mes documents</span>
+                </a>
+
+                <a href="paiements.html" class="sidebar-link">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>Mes paiements</span>
+                </a>
+
+                <p class="sidebar-section-title">MON COMPTE</p>
+
+                <a href="profil.html" class="sidebar-link active">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Mon profil</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <a href="../../index.html" class="sidebar-logout">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Déconnexion</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- OVERLAY MOBILE -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- CONTENU PRINCIPAL -->
+        <main class="citizen-main">
+            <!-- HEADER -->
+            <header class="citizen-header">
+                <button
+                    class="sidebar-toggle"
+                    id="sidebarToggle"
+                    aria-label="Ouvrir le menu"
+                    aria-expanded="false"
+                    aria-controls="sidebar"
+                >
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div class="header-title">
+                    <h1>Mon profil</h1>
+                    <p>Gérez vos informations personnelles</p>
+                </div>
+
+                <div class="header-actions">
+                    <button
+                        class="header-notification"
+                        aria-label="Notifications"
+                    >
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="header-user">
+                        <div class="header-user-avatar">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div class="header-user-info">
+                            <span class="header-user-name">Jean Dupont</span>
+                            <span class="header-user-role">Citoyen</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- PAGE CONTENT -->
+            <section class="citizen-content profil-page-content">
+                <!-- INTRODUCTION -->
+                <div class="page-intro profil-intro">
+                    <div>
+                        <h2>Informations personnelles</h2>
+                        <p>
+                            Consultez et mettez à jour les informations de votre
+                            compte.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PROFIL -->
+                <div class="profil-layout">
+                    <!-- CARTE PROFIL -->
+                    <div class="profil-card">
+                        <div class="profil-avatar-container">
+                            <div class="profil-avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+
+                            <h3>Jean Dupont</h3>
+                            <p>Compte citoyen</p>
+
+                            <span class="profil-status">
+                                <i class="fa-solid fa-circle-check"></i>
+                                Compte actif
+                            </span>
+                        </div>
+
+                        <div class="profil-card-info">
+                            <div class="profil-info-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <span>Email</span>
+                                    <strong>jean.dupont@email.com</strong>
+                                </div>
+                            </div>
+
+                            <div class="profil-info-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <span>Téléphone</span>
+                                    <strong>+243 812 345 678</strong>
+                                </div>
+                            </div>
+
+                            <div class="profil-info-item">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <span>Commune</span>
+                                    <strong>Gombe</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FORMULAIRE INFORMATIONS -->
+                    <div class="profil-form-card">
+                        <div class="profil-card-header">
+                            <div>
+                                <h3>Modifier mes informations</h3>
+                                <p>Vos informations d'identification</p>
+                            </div>
+
+                            <i class="fa-solid fa-user-pen"></i>
+                        </div>
+
+                        <form id="profilForm">
+                            <div class="form-grid">
+                                <!-- NOM -->
+                                <div class="form-group">
+                                    <label for="nom">Nom *</label>
+                                    <input
+                                        type="text"
+                                        id="nom"
+                                        name="nom"
+                                        value="Dupont"
+                                        required
+                                    />
+                                </div>
+
+                                <!-- POSTNOM -->
+                                <div class="form-group">
+                                    <label for="postnom">Postnom</label>
+                                    <input
+                                        type="text"
+                                        id="postnom"
+                                        name="postnom"
+                                        value=""
+                                    />
+                                </div>
+
+                                <!-- PRENOM -->
+                                <div class="form-group">
+                                    <label for="prenom">Prénom *</label>
+                                    <input
+                                        type="text"
+                                        id="prenom"
+                                        name="prenom"
+                                        value="Jean"
+                                        required
+                                    />
+                                </div>
+
+                                <!-- SEXE -->
+                                <div class="form-group">
+                                    <label for="sexe">Sexe *</label>
+                                    <select id="sexe" name="sexe" required>
+                                        <option value="">Sélectionner</option>
+                                        <option value="masculin" selected>
+                                            Masculin
+                                        </option>
+                                        <option value="feminin">Féminin</option>
+                                    </select>
+                                </div>
+
+                                <!-- DATE NAISSANCE -->
+                                <div class="form-group">
+                                    <label for="dateNaissance"
+                                        >Date de naissance *</label
+                                    >
+                                    <input
+                                        type="date"
+                                        id="dateNaissance"
+                                        name="dateNaissance"
+                                        value="1998-05-15"
+                                        required
+                                    />
+                                </div>
+
+                                <!-- TELEPHONE -->
+                                <div class="form-group">
+                                    <label for="telephone">Téléphone *</label>
+                                    <input
+                                        type="tel"
+                                        id="telephone"
+                                        name="telephone"
+                                        value="+243 812 345 678"
+                                        required
+                                    />
+                                </div>
+
+                                <!-- EMAIL -->
+                                <div class="form-group">
+                                    <label for="email">Adresse e-mail *</label>
+                                    <input
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                        value="jean.dupont@email.com"
+                                        required
+                                    />
+                                </div>
+
+                                <!-- COMMUNE -->
+                                <div class="form-group">
+                                    <label for="commune"
+                                        >Commune de résidence *</label
+                                    >
+                                    <select
+                                        id="commune"
+                                        name="commune"
+                                        required
+                                    >
+                                        <option value="">
+                                            Sélectionner votre commune
+                                        </option>
+                                        <option value="Bandalungwa">
+                                            Bandalungwa
+                                        </option>
+                                        <option value="Barumbu">Barumbu</option>
+                                        <option value="Bumbu">Bumbu</option>
+                                        <option value="Gombe" selected>
+                                            Gombe
+                                        </option>
+                                        <option value="Kalamu">Kalamu</option>
+                                        <option value="Kasa-Vubu">
+                                            Kasa-Vubu
+                                        </option>
+                                        <option value="Kimbanseke">
+                                            Kimbanseke
+                                        </option>
+                                        <option value="Kinshasa">
+                                            Kinshasa
+                                        </option>
+                                        <option value="Kintambo">
+                                            Kintambo
+                                        </option>
+                                        <option value="Kisenso">Kisenso</option>
+                                        <option value="Lemba">Lemba</option>
+                                        <option value="Limete">Limete</option>
+                                        <option value="Lingwala">
+                                            Lingwala
+                                        </option>
+                                        <option value="Makala">Makala</option>
+                                        <option value="Maluku">Maluku</option>
+                                        <option value="Masina">Masina</option>
+                                        <option value="Matete">Matete</option>
+                                        <option value="Mont-Ngafula">
+                                            Mont-Ngafula
+                                        </option>
+                                        <option value="Ndjili">Ndjili</option>
+                                        <option value="Ngaba">Ngaba</option>
+                                        <option value="Ngaliema">
+                                            Ngaliema
+                                        </option>
+                                        <option value="Ngiri-Ngiri">
+                                            Ngiri-Ngiri
+                                        </option>
+                                        <option value="Nsele">Nsele</option>
+                                        <option value="Selembao">
+                                            Selembao
+                                        </option>
+                                    </select>
+                                </div>
+
+                                <!-- QUARTIER -->
+                                <div class="form-group">
+                                    <label for="quartier">Quartier *</label>
+                                    <input
+                                        type="text"
+                                        id="quartier"
+                                        name="quartier"
+                                        value="Centre-ville"
+                                        required
+                                    />
+                                </div>
+
+                                <!-- AVENUE -->
+                                <div class="form-group">
+                                    <label for="avenue">Avenue / Rue</label>
+                                    <input
+                                        type="text"
+                                        id="avenue"
+                                        name="avenue"
+                                        value=""
+                                    />
+                                </div>
+
+                                <!-- NUMERO -->
+                                <div class="form-group">
+                                    <label for="numero"
+                                        >Numéro de parcelle</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="numero"
+                                        name="numero"
+                                        value=""
+                                    />
+                                </div>
+
+                                <!-- PIECE IDENTITE -->
+                                <div class="form-group">
+                                    <label for="pieceIdentite"
+                                        >Type de pièce d'identité *</label
+                                    >
+                                    <select
+                                        id="pieceIdentite"
+                                        name="pieceIdentite"
+                                        required
+                                    >
+                                        <option value="">Sélectionner</option>
+                                        <option value="carte-identite" selected>
+                                            Carte d'identité nationale
+                                        </option>
+                                        <option value="passeport">
+                                            Passeport
+                                        </option>
+                                        <option value="permis">
+                                            Permis de conduire
+                                        </option>
+                                        <option value="autre">Autre</option>
+                                    </select>
+                                </div>
+
+                                <!-- NUMERO PIECE -->
+                                <div class="form-group">
+                                    <label for="numeroPiece"
+                                        >Numéro de pièce d'identité *</label
+                                    >
+                                    <input
+                                        type="text"
+                                        id="numeroPiece"
+                                        name="numeroPiece"
+                                        value="ID-123456789"
+                                        required
+                                    />
+                                </div>
+                            </div>
+
+                            <div class="profil-form-actions">
+                                <button type="reset" class="btn btn-secondary">
+                                    <i class="fa-solid fa-rotate-left"></i>
+                                    Annuler
+                                </button>
+
+                                <button type="submit" class="btn btn-primary">
+                                    <i class="fa-solid fa-floppy-disk"></i>
+                                    Enregistrer les modifications
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- CHANGEMENT MOT DE PASSE -->
+                <div class="profil-password-card">
+                    <div class="profil-card-header">
+                        <div>
+                            <h3>Sécurité du compte</h3>
+                            <p>
+                                Modifiez votre mot de passe pour sécuriser votre
+                                compte.
+                            </p>
+                        </div>
+
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+
+                    <form id="passwordForm">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="ancienMotDePasse">
+                                    Ancien mot de passe *
+                                </label>
+
+                                <input
+                                    type="password"
+                                    id="ancienMotDePasse"
+                                    name="ancienMotDePasse"
+                                    placeholder="Votre ancien mot de passe"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nouveauMotDePasse">
+                                    Nouveau mot de passe *
+                                </label>
+
+                                <input
+                                    type="password"
+                                    id="nouveauMotDePasse"
+                                    name="nouveauMotDePasse"
+                                    placeholder="Nouveau mot de passe"
+                                    minlength="8"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirmerMotDePasse">
+                                    Confirmer le nouveau mot de passe *
+                                </label>
+
+                                <input
+                                    type="password"
+                                    id="confirmerMotDePasse"
+                                    name="confirmerMotDePasse"
+                                    placeholder="Confirmer le mot de passe"
+                                    minlength="8"
+                                    required
+                                />
+                            </div>
+                        </div>
+
+                        <div class="profil-password-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa-solid fa-lock"></i>
+                                Modifier le mot de passe
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- FOOTER -->
+            <footer class="citizen-footer">
+                <p>
+                    &copy; <span id="currentYear"></span>
+                    CommuneConnect. Tous droits réservés.
+                </p>
+            </footer>
+        </main>
+
+        <!-- MESSAGE DE CONFIRMATION -->
+        <div class="profil-message-overlay" id="profilMessageOverlay">
+            <div class="profil-message-box">
+                <div class="profil-message-icon">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+
+                <h3 id="profilMessageTitle">Succès</h3>
+
+                <p id="profilMessageText">
+                    Vos informations ont été enregistrées.
+                </p>
+
+                <button
+                    type="button"
+                    class="btn btn-primary"
+                    id="profilMessageClose"
+                >
+                    Fermer
+                </button>
+            </div>
+        </div>
+
+        <!-- JAVASCRIPT -->
+        <script src="../../js/pages/citoyen.js"></script>
+        <script src="../../js/pages/profil.js"></script>
+    </body>
+</html>

@@ -4128,3 +4128,665 @@
         text-align: left;
     }
 }
+
+/* ==========================================
+   PAGE MON PROFIL - COMMUNECONNECT
+========================================== */
+
+.profil-page-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.profil-intro {
+    margin-bottom: 5px;
+}
+
+/* LAYOUT PROFIL */
+
+.profil-layout {
+    display: grid;
+    grid-template-columns: 300px minmax(0, 1fr);
+    gap: 25px;
+    align-items: start;
+}
+
+/* CARTE PROFIL */
+
+.profil-card,
+.profil-form-card,
+.profil-password-card {
+    background: var(--white, #ffffff);
+    border: 1px solid #e8edf3;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+/* PROFIL AVATAR */
+
+.profil-avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px 0 25px;
+    border-bottom: 1px solid #edf0f4;
+}
+
+.profil-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: #e8f1ff;
+    color: var(--primary-color, #1d4ed8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    margin-bottom: 15px;
+    border: 4px solid #ffffff;
+    box-shadow: 0 0 0 2px #dbeafe;
+}
+
+.profil-avatar-container h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 5px;
+}
+
+.profil-avatar-container > p {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 12px;
+}
+
+.profil-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    background: #ecfdf5;
+    color: #059669;
+    padding: 7px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* INFORMATIONS PROFIL */
+
+.profil-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 25px;
+}
+
+.profil-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.profil-info-item > i {
+    width: 38px;
+    height: 38px;
+    min-width: 38px;
+    background: #f1f5f9;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.profil-info-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.profil-info-item span {
+    font-size: 12px;
+    color: #64748b;
+}
+
+.profil-info-item strong {
+    font-size: 13px;
+    color: #1e293b;
+    font-weight: 600;
+    word-break: break-word;
+}
+
+/* ENTÊTES DES CARTES */
+
+.profil-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.profil-card-header h3 {
+    color: #1e293b;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.profil-card-header p {
+    color: #64748b;
+    font-size: 13px;
+}
+
+.profil-card-header > i {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    border-radius: 12px;
+    background: #eff6ff;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+/* FORMULAIRE */
+
+.profil-form-card .form-grid,
+.profil-password-card .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.profil-form-card .form-group,
+.profil-password-card .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.profil-form-card .form-group label,
+.profil-password-card .form-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #334155;
+}
+
+.profil-form-card input,
+.profil-form-card select,
+.profil-password-card input {
+    width: 100%;
+    min-width: 0;
+    height: 46px;
+    padding: 0 13px;
+    border: 1px solid #dbe2ea;
+    border-radius: 9px;
+    background: #ffffff;
+    color: #334155;
+    font-size: 14px;
+    outline: none;
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.profil-form-card input:focus,
+.profil-form-card select:focus,
+.profil-password-card input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.profil-form-card input::placeholder,
+.profil-password-card input::placeholder {
+    color: #94a3b8;
+}
+
+/* BOUTONS FORMULAIRE */
+
+.profil-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid #edf0f4;
+    flex-wrap: wrap;
+}
+
+.profil-form-actions button,
+.profil-password-actions button {
+    min-height: 44px;
+}
+
+/* MOT DE PASSE */
+
+.profil-password-card {
+    width: 100%;
+}
+
+.profil-password-card .form-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.profil-password-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+/* MESSAGE DE CONFIRMATION */
+
+.profil-message-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(3px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    z-index: 9999;
+}
+
+.profil-message-overlay.active {
+    display: flex;
+}
+
+.profil-message-box {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    animation: profilMessageAppear 0.25s ease;
+}
+
+.profil-message-icon {
+    width: 65px;
+    height: 65px;
+    background: #dcfce7;
+    color: #16a34a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    font-size: 28px;
+}
+
+.profil-message-box h3 {
+    font-size: 20px;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.profil-message-box p {
+    font-size: 14px;
+    color: #64748b;
+    line-height: 1.6;
+    margin-bottom: 22px;
+}
+
+.profil-message-box button {
+    width: 100%;
+}
+
+@keyframes profilMessageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1200px) {
+    .profil-layout {
+        grid-template-columns: 250px minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .profil-card,
+    .profil-form-card,
+    .profil-password-card {
+        padding: 20px;
+    }
+
+    .profil-password-card .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    .profil-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .profil-card {
+        max-width: 100%;
+    }
+
+    .profil-card-info {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .profil-page-content {
+        gap: 18px;
+    }
+
+    .profil-card,
+    .profil-form-card,
+    .profil-password-card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .profil-form-card .form-grid,
+    .profil-password-card .form-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .profil-card-info {
+        grid-template-columns: 1fr;
+    }
+
+    .profil-card-header h3 {
+        font-size: 16px;
+    }
+
+    .profil-card-header p {
+        font-size: 12px;
+    }
+
+    .profil-form-actions {
+        flex-direction: column-reverse;
+        align-items: stretch;
+    }
+
+    .profil-form-actions button {
+        width: 100%;
+    }
+
+    .profil-password-actions button {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   CORRECTION LAYOUT PAGE PROFIL
+========================================== */
+
+.profil-page-content {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 25px;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+/* Layout général */
+
+.profil-layout {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    width: 100%;
+    gap: 24px;
+    align-items: start;
+}
+
+/* Carte gauche */
+
+.profil-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Formulaire droite */
+
+.profil-form-card {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+/* Grilles */
+
+.profil-form-card .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+/* Champs */
+
+.profil-form-card .form-group {
+    width: 100%;
+    min-width: 0;
+}
+
+.profil-form-card input,
+.profil-form-card select {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Carte mot de passe */
+
+.profil-password-card {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.profil-password-card .form-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+/* Intro */
+
+.profil-intro {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+/* ==========================================
+   TABLETTE
+========================================== */
+
+@media (max-width: 1100px) {
+    .profil-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .profil-card {
+        max-width: 100%;
+    }
+
+    .profil-card-info {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .profil-password-card .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+    .profil-page-content {
+        padding: 15px;
+    }
+
+    .profil-layout {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .profil-form-card .form-grid,
+    .profil-password-card .form-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .profil-card-info {
+        grid-template-columns: 1fr;
+    }
+
+    .profil-form-actions {
+        flex-direction: column-reverse;
+    }
+
+    .profil-form-actions button {
+        width: 100%;
+    }
+
+    .profil-password-actions button {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   CORRECTION PROFIL - GRAND ÉCRAN
+========================================== */
+
+@media (min-width: 1101px) {
+    .profil-page-content {
+        padding: 30px;
+        overflow: visible;
+    }
+
+    .profil-layout {
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr);
+        gap: 25px;
+        align-items: start;
+        width: 100%;
+    }
+
+    .profil-card {
+        width: 260px;
+        min-width: 260px;
+        position: relative;
+    }
+
+    .profil-form-card {
+        min-width: 0;
+        width: 100%;
+    }
+
+    .profil-form-card .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 22px;
+    }
+
+    .profil-form-card .form-group {
+        min-width: 0;
+    }
+
+    .profil-form-card input,
+    .profil-form-card select {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .profil-card-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .profil-password-card {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .profil-password-card .form-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+    }
+}
+
+/* ==========================================
+   FIX DEFINITIF DU LAYOUT PROFIL DESKTOP
+========================================== */
+
+@media (min-width: 1101px) {
+    body.citizen-page {
+        overflow-x: hidden;
+    }
+
+    .citizen-main {
+        margin-left: 260px;
+        width: calc(100% - 260px);
+        min-width: 0;
+        box-sizing: border-box;
+    }
+
+    .profil-page-content {
+        width: 100%;
+        max-width: 100%;
+        padding: 30px;
+        box-sizing: border-box;
+    }
+
+    .profil-layout {
+        display: grid;
+        grid-template-columns: 260px minmax(0, 1fr);
+        gap: 25px;
+        align-items: start;
+    }
+
+    .profil-card {
+        display: block;
+        width: 100%;
+        min-width: 0;
+        height: fit-content;
+    }
+
+    .profil-form-card {
+        display: block;
+        width: 100%;
+        min-width: 0;
+    }
+
+    .profil-card-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profil-form-card .form-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

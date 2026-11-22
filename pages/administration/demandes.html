@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Gestion des demandes | CommuneConnect</title>
+
+        <link rel="stylesheet" href="../../css/style.css" />
+        <link rel="stylesheet" href="../../css/pages/admin.css" />
+    </head>
+
+    <body class="admin-page">
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <div class="admin-logo-icon">CC</div>
+
+                <div class="admin-logo-text">
+                    <h2>CommuneConnect</h2>
+                    <span>Administration</span>
+                </div>
+            </div>
+
+            <nav class="admin-navigation">
+                <p class="admin-nav-title">MENU PRINCIPAL</p>
+
+                <a href="tableau-de-bord.html" class="admin-nav-link">
+                    <span>🏠</span>
+                    <span>Tableau de bord</span>
+                </a>
+
+                <a href="demandes.html" class="admin-nav-link active">
+                    <span>📋</span>
+                    <span>Gestion des demandes</span>
+                </a>
+
+                <a href="citoyens.html" class="admin-nav-link">
+                    <span>👥</span>
+                    <span>Citoyens</span>
+                </a>
+
+                <a href="documents.html" class="admin-nav-link">
+                    <span>📄</span>
+                    <span>Documents administratifs</span>
+                </a>
+
+                <p class="admin-nav-title">AUTRES</p>
+
+                <a href="parametres.html" class="admin-nav-link">
+                    <span>⚙️</span>
+                    <span>Paramètres</span>
+                </a>
+            </nav>
+
+            <div class="admin-sidebar-bottom">
+                <div class="admin-user">
+                    <div class="admin-user-avatar">AD</div>
+
+                    <div class="admin-user-info">
+                        <strong>Administrateur</strong>
+                        <span>Admin communal</span>
+                    </div>
+                </div>
+
+                <a href="../../index.html" class="admin-logout">
+                    <span>🚪</span>
+                    Déconnexion
+                </a>
+            </div>
+        </aside>
+
+        <!-- CONTENU PRINCIPAL -->
+        <main class="admin-main">
+            <!-- HEADER -->
+            <header class="admin-header">
+                <div class="admin-header-left">
+                    <button class="admin-menu-button" id="adminMenuButton">
+                        ☰
+                    </button>
+
+                    <div>
+                        <h1>Gestion des demandes</h1>
+                        <p>Consultez et gérez les demandes administratives.</p>
+                    </div>
+                </div>
+
+                <div class="admin-header-right">
+                    <button class="admin-notification-button">
+                        🔔
+                        <span class="notification-badge">3</span>
+                    </button>
+
+                    <div class="admin-header-profile">
+                        <div class="admin-user-avatar">AD</div>
+
+                        <div>
+                            <strong>Administrateur</strong>
+                            <span>Administration communale</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- CONTENU -->
+            <section class="admin-content">
+                <!-- INTRODUCTION -->
+                <div class="admin-welcome">
+                    <div>
+                        <h2>Liste des demandes 📋</h2>
+
+                        <p>
+                            Retrouvez toutes les demandes déposées par les
+                            citoyens.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- STATISTIQUES -->
+                <div class="admin-stats-grid">
+                    <div class="admin-stat-card">
+                        <div class="admin-stat-icon blue">📋</div>
+
+                        <div class="admin-stat-info">
+                            <p>Total des demandes</p>
+                            <h3>248</h3>
+                            <span>Toutes les demandes</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-stat-card">
+                        <div class="admin-stat-icon orange">⏳</div>
+
+                        <div class="admin-stat-info">
+                            <p>En attente</p>
+                            <h3>36</h3>
+                            <span>À examiner</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-stat-card">
+                        <div class="admin-stat-icon green">✅</div>
+
+                        <div class="admin-stat-info">
+                            <p>Approuvées</p>
+                            <h3>172</h3>
+                            <span>Demandes validées</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-stat-card">
+                        <div class="admin-stat-icon red">❌</div>
+
+                        <div class="admin-stat-info">
+                            <p>Rejetées</p>
+                            <h3>40</h3>
+                            <span>Demandes refusées</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FILTRES -->
+                <div class="admin-section">
+                    <div class="admin-section-header">
+                        <div>
+                            <h2>Rechercher une demande</h2>
+
+                            <p>
+                                Utilisez les filtres pour retrouver une demande.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="admin-filters">
+                        <div class="admin-search-box">
+                            <span>🔍</span>
+
+                            <input
+                                type="search"
+                                id="searchDemande"
+                                placeholder="Référence, nom du citoyen..."
+                            />
+                        </div>
+
+                        <select id="filterStatut" class="admin-filter-select">
+                            <option value="">Tous les statuts</option>
+                            <option value="En attente">En attente</option>
+                            <option value="En traitement">En traitement</option>
+                            <option value="Approuvée">Approuvée</option>
+                            <option value="Rejetée">Rejetée</option>
+                        </select>
+
+                        <select id="filterDocument" class="admin-filter-select">
+                            <option value="">Tous les documents</option>
+                            <option value="Attestation de résidence">
+                                Attestation de résidence
+                            </option>
+                            <option value="Certificat de naissance">
+                                Certificat de naissance
+                            </option>
+                            <option value="Certificat de mariage">
+                                Certificat de mariage
+                            </option>
+                            <option value="Attestation de célibat">
+                                Attestation de célibat
+                            </option>
+                        </select>
+
+                        <button id="resetFilters" class="admin-reset-button">
+                            Réinitialiser
+                        </button>
+                    </div>
+                </div>
+
+                <!-- TABLEAU DES DEMANDES -->
+                <div class="admin-section">
+                    <div class="admin-section-header">
+                        <div>
+                            <h2>Demandes enregistrées</h2>
+
+                            <p>
+                                <span id="demandesCount">8</span> demandes
+                                affichées
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="admin-table-container">
+                        <table class="admin-table" id="demandesTable">
+                            <thead>
+                                <tr>
+                                    <th>Référence</th>
+                                    <th>Citoyen</th>
+                                    <th>Document demandé</th>
+                                    <th>Date de soumission</th>
+                                    <th>Statut</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr
+                                    data-statut="En attente"
+                                    data-document="Attestation de résidence"
+                                >
+                                    <td>CC-2026-001</td>
+                                    <td>Jean Mukendi</td>
+                                    <td>Attestation de résidence</td>
+                                    <td>20/11/2026</td>
+
+                                    <td>
+                                        <span class="status-badge pending">
+                                            En attente
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a
+                                            href="details-demande.html"
+                                            class="admin-action-button"
+                                        >
+                                            Consulter
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr
+                                    data-statut="Approuvée"
+                                    data-document="Certificat de naissance"
+                                >
+                                    <td>CC-2026-002</td>
+                                    <td>Marie Kabeya</td>
+                                    <td>Certificat de naissance</td>
+                                    <td>19/11/2026</td>
+
+                                    <td>
+                                        <span class="status-badge approved">
+                                            Approuvée
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a
+                                            href="details-demande.html"
+                                            class="admin-action-button"
+                                        >
+                                            Consulter
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr
+                                    data-statut="En traitement"
+                                    data-document="Attestation de résidence"
+                                >
+                                    <td>CC-2026-003</td>
+                                    <td>Paul Tshibanda</td>
+                                    <td>Attestation de résidence</td>
+                                    <td>19/11/2026</td>
+
+                                    <td>
+                                        <span class="status-badge processing">
+                                            En traitement
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a
+                                            href="details-demande.html"
+                                            class="admin-action-button"
+                                        >
+                                            Consulter
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr
+                                    data-statut="Rejetée"
+                                    data-document="Certificat de mariage"
+                                >
+                                    <td>CC-2026-004</td>
+                                    <td>Sarah Nsimba</td>
+                                    <td>Certificat de mariage</td>
+                                    <td>18/11/2026</td>
+
+                                    <td>
+                                        <span class="status-badge rejected">
+                                            Rejetée
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a
+                                            href="details-demande.html"
+                                            class="admin-action-button"
+                                        >
+                                            Consulter
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr
+                                    data-statut="En attente"
+                                    data-document="Certificat de mariage"
+                                >
+                                    <td>CC-2026-005</td>
+                                    <td>David Ilunga</td>
+                                    <td>Certificat de mariage</td>
+                                    <td>18/11/2026</td>
+
+                                    <td>
+                                        <span class="status-badge pending">
+                                            En attente
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a
+                                            href="details-demande.html"
+                                            class="admin-action-button"
+                                        >
+                                            Consulter
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr
+                                    data-statut="Approuvée"
+                                    data-document="Attestation de célibat"
+                                >
+                                    <td>CC-2026-006</td>
+                                    <td>Grace Mbuyi</td>
+                                    <td>Attestation de célibat</td>
+                                    <td>17/11/2026</td>
+
+                                    <td>
+                                        <span class="status-badge approved">
+                                            Approuvée
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a
+                                            href="details-demande.html"
+                                            class="admin-action-button"
+                                        >
+                                            Consulter
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr
+                                    data-statut="En traitement"
+                                    data-document="Certificat de naissance"
+                                >
+                                    <td>CC-2026-007</td>
+                                    <td>Patrick Kalala</td>
+                                    <td>Certificat de naissance</td>
+                                    <td>17/11/2026</td>
+
+                                    <td>
+                                        <span class="status-badge processing">
+                                            En traitement
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a
+                                            href="details-demande.html"
+                                            class="admin-action-button"
+                                        >
+                                            Consulter
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr
+                                    data-statut="En attente"
+                                    data-document="Attestation de résidence"
+                                >
+                                    <td>CC-2026-008</td>
+                                    <td>Esther Lumbu</td>
+                                    <td>Attestation de résidence</td>
+                                    <td>16/11/2026</td>
+
+                                    <td>
+                                        <span class="status-badge pending">
+                                            En attente
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a
+                                            href="details-demande.html"
+                                            class="admin-action-button"
+                                        >
+                                            Consulter
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <!-- AUCUN RESULTAT -->
+                        <div
+                            id="noDemandesResult"
+                            class="admin-empty-state"
+                            hidden
+                        >
+                            <div>🔍</div>
+
+                            <h3>Aucune demande trouvée</h3>
+
+                            <p>
+                                Essayez de modifier vos critères de recherche.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <script src="../../js/admin.js"></script>
+    </body>
+</html>
