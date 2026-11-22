@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Tableau de bord | CommuneConnect</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/reset.css" />
+        <link rel="stylesheet" href="../../css/variables.css" />
+        <link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/components/sidebar.css" />
+        <link rel="stylesheet" href="../../css/pages/citoyen.css" />
+        <link rel="stylesheet" href="../../css/responsive.css" />
+    </head>
+
+    <body class="citizen-dashboard">
+        <!-- =====================================
+         SIDEBAR
+    ====================================== -->
+
+        <aside class="sidebar" id="sidebar">
+            <!-- Logo -->
+            <div class="sidebar-brand">
+                <div class="sidebar-logo">CC</div>
+
+                <div class="sidebar-brand-text">
+                    <h2>CommuneConnect</h2>
+                    <p>Espace citoyen</p>
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="sidebar-navigation">
+                <p class="nav-title">MENU PRINCIPAL</p>
+
+                <a href="tableau-de-bord.html" class="nav-link active">
+                    <span class="nav-icon">⌂</span>
+                    <span>Tableau de bord</span>
+                </a>
+
+                <a href="nouvelle-demande.html" class="nav-link">
+                    <span class="nav-icon">＋</span>
+                    <span>Nouvelle demande</span>
+                </a>
+
+                <a href="suivi-demandes.html" class="nav-link">
+                    <span class="nav-icon">◷</span>
+                    <span>Mes demandes</span>
+                </a>
+
+                <a href="mes-documents.html" class="nav-link">
+                    <span class="nav-icon">▤</span>
+                    <span>Mes documents</span>
+                </a>
+
+                <a href="paiements.html" class="nav-link">
+                    <span class="nav-icon">₣</span>
+                    <span>Mes paiements</span>
+                </a>
+
+                <p class="nav-title nav-title-secondary">MON COMPTE</p>
+
+                <a href="profil.html" class="nav-link">
+                    <span class="nav-icon">♙</span>
+                    <span>Mon profil</span>
+                </a>
+            </nav>
+
+            <!-- Bas de sidebar -->
+            <div class="sidebar-bottom">
+                <a href="../../index.html" class="nav-link logout-link">
+                    <span class="nav-icon">↪</span>
+                    <span>Déconnexion</span>
+                </a>
+
+                <div class="sidebar-footer">
+                    <p>CommuneConnect</p>
+                    <span
+                        >Version 1.0 — <span data-current-year>2026</span></span
+                    >
+                </div>
+            </div>
+        </aside>
+
+        <!-- =====================================
+         CONTENU PRINCIPAL
+    ====================================== -->
+
+        <main class="dashboard-main">
+            <!-- HEADER -->
+            <header class="dashboard-header">
+                <div class="dashboard-header-left">
+                    <button
+                        class="sidebar-toggle"
+                        id="sidebarToggle"
+                        aria-label="Ouvrir le menu"
+                        aria-expanded="false"
+                        aria-controls="sidebar"
+                    >
+                        ☰
+                    </button>
+
+                    <div>
+                        <h1>Tableau de bord</h1>
+                        <p>Vue générale de vos démarches administratives</p>
+                    </div>
+                </div>
+
+                <div class="dashboard-header-right">
+                    <!-- Notifications -->
+                    <button
+                        class="notification-button"
+                        aria-label="Notifications"
+                    >
+                        ♧
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <!-- Profil -->
+                    <div class="user-profile">
+                        <div class="user-avatar">JD</div>
+
+                        <div class="user-info">
+                            <span class="user-name">Jean Dupont</span>
+                            <span class="user-role">Citoyen</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- CONTENU -->
+            <div class="dashboard-content">
+                <!-- Bienvenue -->
+                <section class="welcome-section">
+                    <div class="welcome-text">
+                        <h2>Bonjour, Jean 👋</h2>
+
+                        <p>
+                            Bienvenue dans votre espace citoyen. Gérez vos
+                            démarches administratives en toute simplicité.
+                        </p>
+                    </div>
+
+                    <a href="nouvelle-demande.html" class="new-request-button">
+                        <span>＋</span>
+                        Nouvelle demande
+                    </a>
+                </section>
+
+                <!-- STATISTIQUES -->
+                <section class="stats-grid">
+                    <article class="stat-card stat-blue">
+                        <div class="stat-icon">▤</div>
+
+                        <div class="stat-info">
+                            <p>Demandes totales</p>
+                            <h3>08</h3>
+                        </div>
+                    </article>
+
+                    <article class="stat-card stat-orange">
+                        <div class="stat-icon">◷</div>
+
+                        <div class="stat-info">
+                            <p>En traitement</p>
+                            <h3>03</h3>
+                        </div>
+                    </article>
+
+                    <article class="stat-card stat-green">
+                        <div class="stat-icon">✓</div>
+
+                        <div class="stat-info">
+                            <p>Demandes validées</p>
+                            <h3>04</h3>
+                        </div>
+                    </article>
+
+                    <article class="stat-card stat-red">
+                        <div class="stat-icon">!</div>
+
+                        <div class="stat-info">
+                            <p>Demandes rejetées</p>
+                            <h3>01</h3>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- DERNIÈRES DEMANDES -->
+                <section class="recent-requests">
+                    <div class="section-header">
+                        <div>
+                            <h2>Mes dernières demandes</h2>
+                            <p>Consultez l'état de vos démarches récentes.</p>
+                        </div>
+
+                        <a href="suivi-demandes.html" class="view-all">
+                            Voir tout →
+                        </a>
+                    </div>
+
+                    <div class="requests-table-container">
+                        <table class="requests-table">
+                            <thead>
+                                <tr>
+                                    <th>Référence</th>
+                                    <th>Document</th>
+                                    <th>Date</th>
+                                    <th>Statut</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <tr>
+                                    <td>CC-KIN-2026-000125</td>
+
+                                    <td>Acte de naissance</td>
+
+                                    <td>18/11/2026</td>
+
+                                    <td>
+                                        <span class="status status-processing">
+                                            En traitement
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a
+                                            href="suivi-demandes.html"
+                                            class="table-action"
+                                        >
+                                            Voir
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>CC-KIN-2026-000119</td>
+
+                                    <td>Attestation de résidence</td>
+
+                                    <td>15/11/2026</td>
+
+                                    <td>
+                                        <span class="status status-approved">
+                                            Validée
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a
+                                            href="mes-documents.html"
+                                            class="table-action"
+                                        >
+                                            Voir
+                                        </a>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>CC-KIN-2026-000108</td>
+
+                                    <td>Certificat de célibat</td>
+
+                                    <td>10/11/2026</td>
+
+                                    <td>
+                                        <span class="status status-rejected">
+                                            Rejetée
+                                        </span>
+                                    </td>
+
+                                    <td>
+                                        <a
+                                            href="suivi-demandes.html"
+                                            class="table-action"
+                                        >
+                                            Voir
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- ACTIONS RAPIDES -->
+                <section class="quick-actions">
+                    <h2>Actions rapides</h2>
+
+                    <div class="quick-actions-grid">
+                        <a
+                            href="nouvelle-demande.html"
+                            class="quick-action-card"
+                        >
+                            <div class="quick-action-icon blue-icon">＋</div>
+
+                            <div>
+                                <h3>Nouvelle demande</h3>
+                                <p>Demander un document administratif</p>
+                            </div>
+
+                            <span class="quick-arrow">→</span>
+                        </a>
+
+                        <a href="mes-documents.html" class="quick-action-card">
+                            <div class="quick-action-icon green-icon">▤</div>
+
+                            <div>
+                                <h3>Mes documents</h3>
+                                <p>Consulter vos documents disponibles</p>
+                            </div>
+
+                            <span class="quick-arrow">→</span>
+                        </a>
+
+                        <a href="paiements.html" class="quick-action-card">
+                            <div class="quick-action-icon orange-icon">₣</div>
+
+                            <div>
+                                <h3>Mes paiements</h3>
+                                <p>Consulter vos paiements</p>
+                            </div>
+
+                            <span class="quick-arrow">→</span>
+                        </a>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- JAVASCRIPT -->
+        <script src="../../js/pages/citoyen.js"></script>
+    </body>
+</html>

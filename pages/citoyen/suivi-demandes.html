@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Mes demandes | CommuneConnect</title>
+
+        <link rel="stylesheet" href="../../css/reset.css" />
+        <link rel="stylesheet" href="../../css/variables.css" />
+        <link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/components/sidebar.css" />
+        <link rel="stylesheet" href="../../css/pages/citoyen.css" />
+        <link rel="stylesheet" href="../../css/responsive.css" />
+    </head>
+
+    <body class="citizen-dashboard">
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="../../index.html" class="sidebar-brand">
+                    <div class="brand-logo">CC</div>
+
+                    <div class="brand-info">
+                        <span class="brand-name">CommuneConnect</span>
+                        <span class="brand-subtitle">Services communaux</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="sidebar-navigation">
+                <span class="nav-section-title">MENU PRINCIPAL</span>
+
+                <a href="tableau-de-bord.html" class="nav-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Tableau de bord</span>
+                </a>
+
+                <a href="nouvelle-demande.html" class="nav-link">
+                    <span class="nav-icon">＋</span>
+                    <span>Nouvelle demande</span>
+                </a>
+
+                <a href="suivi-demandes.html" class="nav-link active">
+                    <span class="nav-icon">◷</span>
+                    <span>Mes demandes</span>
+                </a>
+
+                <a href="mes-documents.html" class="nav-link">
+                    <span class="nav-icon">▤</span>
+                    <span>Mes documents</span>
+                </a>
+
+                <a href="paiements.html" class="nav-link">
+                    <span class="nav-icon">▣</span>
+                    <span>Mes paiements</span>
+                </a>
+
+                <span class="nav-section-title">MON COMPTE</span>
+
+                <a href="profil.html" class="nav-link">
+                    <span class="nav-icon">♙</span>
+                    <span>Mon profil</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a
+                    href="../authentification/connexion.html"
+                    class="logout-link"
+                >
+                    <span class="nav-icon">↪</span>
+                    <span>Déconnexion</span>
+                </a>
+
+                <div class="sidebar-version">Version 1.0</div>
+            </div>
+        </aside>
+
+        <!-- CONTENU PRINCIPAL -->
+        <main class="dashboard-main">
+            <!-- HEADER -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button
+                        class="sidebar-toggle"
+                        id="sidebarToggle"
+                        aria-label="Ouvrir le menu"
+                        aria-expanded="false"
+                        aria-controls="sidebar"
+                    >
+                        ☰
+                    </button>
+
+                    <div class="header-title">
+                        <h1>Mes demandes</h1>
+                        <p>Consultez et suivez vos demandes administratives</p>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <button
+                        class="notification-button"
+                        aria-label="Notifications"
+                    >
+                        ♧
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="header-profile">
+                        <div class="profile-avatar">JD</div>
+
+                        <div class="profile-info">
+                            <span class="profile-name">Jean Dupont</span>
+                            <span class="profile-role">Citoyen</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- CONTENU -->
+            <section class="requests-page-content">
+                <!-- INTRODUCTION -->
+                <div class="requests-introduction">
+                    <div>
+                        <h2>Historique de mes demandes</h2>
+
+                        <p>
+                            Retrouvez toutes vos demandes et consultez leur état
+                            d'avancement.
+                        </p>
+                    </div>
+
+                    <a href="nouvelle-demande.html" class="new-request-button">
+                        <span>＋</span>
+                        Nouvelle demande
+                    </a>
+                </div>
+
+                <!-- STATISTIQUES -->
+                <div class="requests-statistics">
+                    <div class="request-stat-card">
+                        <div class="request-stat-icon total-icon">▤</div>
+
+                        <div>
+                            <span>Total des demandes</span>
+                            <strong id="totalRequests">08</strong>
+                        </div>
+                    </div>
+
+                    <div class="request-stat-card">
+                        <div class="request-stat-icon pending-icon">◷</div>
+
+                        <div>
+                            <span>En attente</span>
+                            <strong id="pendingRequests">02</strong>
+                        </div>
+                    </div>
+
+                    <div class="request-stat-card">
+                        <div class="request-stat-icon processing-icon">↻</div>
+
+                        <div>
+                            <span>En traitement</span>
+                            <strong id="processingRequests">03</strong>
+                        </div>
+                    </div>
+
+                    <div class="request-stat-card">
+                        <div class="request-stat-icon approved-icon">✓</div>
+
+                        <div>
+                            <span>Validées</span>
+                            <strong id="approvedRequests">02</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FILTRES -->
+                <div class="requests-filter-card">
+                    <div class="requests-filter-header">
+                        <h3>Liste de mes demandes</h3>
+
+                        <span id="requestsCount">8 demandes</span>
+                    </div>
+
+                    <div class="requests-filters">
+                        <div class="search-box">
+                            <span class="search-icon">⌕</span>
+
+                            <input
+                                type="search"
+                                id="requestSearch"
+                                placeholder="Rechercher une demande..."
+                            />
+                        </div>
+
+                        <select id="statusFilter">
+                            <option value="all">Tous les statuts</option>
+                            <option value="pending">En attente</option>
+                            <option value="processing">En traitement</option>
+                            <option value="approved">Validée</option>
+                            <option value="rejected">Rejetée</option>
+                        </select>
+
+                        <select id="communeFilter">
+                            <option value="all">Toutes les communes</option>
+
+                            <option value="Gombe">Gombe</option>
+                            <option value="Lemba">Lemba</option>
+                            <option value="Ngaliema">Ngaliema</option>
+                            <option value="Limete">Limete</option>
+                            <option value="Matete">Matete</option>
+                            <option value="Kinshasa">Kinshasa</option>
+                            <option value="Bandalungwa">Bandalungwa</option>
+                        </select>
+                    </div>
+
+                    <!-- TABLEAU -->
+                    <div class="requests-table-container">
+                        <div class="requests-table-wrapper">
+                            <table class="requests-table">
+                                <thead>
+                                    <tr>
+                                        <th>Référence</th>
+                                        <th>Document</th>
+                                        <th>Commune</th>
+                                        <th>Date</th>
+                                        <th>Statut</th>
+                                        <th>Frais</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody id="requestsTableBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- ÉTAT VIDE -->
+                    <div
+                        class="requests-empty"
+                        id="requestsEmpty"
+                        style="display: none"
+                    >
+                        <div class="empty-icon">📄</div>
+
+                        <h3>Aucune demande trouvée</h3>
+
+                        <p>
+                            Essayez de modifier vos filtres ou créez une
+                            nouvelle demande.
+                        </p>
+
+                        <a
+                            href="nouvelle-demande.html"
+                            class="new-request-button"
+                        >
+                            Créer une demande
+                        </a>
+                    </div>
+
+                    <!-- PAGINATION -->
+                    <div class="requests-pagination" id="requestsPagination">
+                        <button id="previousPage" disabled>← Précédent</button>
+
+                        <span id="pageInformation"> Page 1 </span>
+
+                        <button id="nextPage">Suivant →</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- MODAL DÉTAILS -->
+        <div class="request-details-overlay" id="requestDetailsOverlay">
+            <div class="request-details-modal">
+                <div class="details-modal-header">
+                    <div>
+                        <h2>Détails de la demande</h2>
+                        <p>Informations concernant votre dossier</p>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="details-close"
+                        id="closeDetails"
+                        aria-label="Fermer"
+                    >
+                        ×
+                    </button>
+                </div>
+
+                <div id="requestDetailsContent"></div>
+            </div>
+        </div>
+
+        <script src="../../js/pages/citoyen.js"></script>
+        <script src="../../js/pages/suivi-demandes.js"></script>
+    </body>
+</html>

@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Nouvelle demande | CommuneConnect</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/reset.css" />
+        <link rel="stylesheet" href="../../css/variables.css" />
+        <link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/components/sidebar.css" />
+        <link rel="stylesheet" href="../../css/pages/citoyen.css" />
+        <link rel="stylesheet" href="../../css/responsive.css" />
+    </head>
+
+    <body class="citizen-dashboard">
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <a href="../../index.html" class="sidebar-brand">
+                    <div class="brand-logo">CC</div>
+
+                    <div class="brand-info">
+                        <span class="brand-name">CommuneConnect</span>
+                        <span class="brand-subtitle">Services communaux</span>
+                    </div>
+                </a>
+            </div>
+
+            <nav class="sidebar-navigation">
+                <span class="nav-section-title">MENU PRINCIPAL</span>
+
+                <a href="tableau-de-bord.html" class="nav-link">
+                    <span class="nav-icon">▦</span>
+                    <span>Tableau de bord</span>
+                </a>
+
+                <a href="nouvelle-demande.html" class="nav-link active">
+                    <span class="nav-icon">＋</span>
+                    <span>Nouvelle demande</span>
+                </a>
+
+                <a href="suivi-demandes.html" class="nav-link">
+                    <span class="nav-icon">◷</span>
+                    <span>Mes demandes</span>
+                </a>
+
+                <a href="mes-documents.html" class="nav-link">
+                    <span class="nav-icon">▤</span>
+                    <span>Mes documents</span>
+                </a>
+
+                <a href="paiements.html" class="nav-link">
+                    <span class="nav-icon">▣</span>
+                    <span>Mes paiements</span>
+                </a>
+
+                <span class="nav-section-title">MON COMPTE</span>
+
+                <a href="profil.html" class="nav-link">
+                    <span class="nav-icon">♙</span>
+                    <span>Mon profil</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a
+                    href="../authentification/connexion.html"
+                    class="logout-link"
+                >
+                    <span class="nav-icon">↪</span>
+                    <span>Déconnexion</span>
+                </a>
+
+                <div class="sidebar-version">Version 1.0</div>
+            </div>
+        </aside>
+
+        <!-- CONTENU PRINCIPAL -->
+        <main class="dashboard-main">
+            <!-- HEADER -->
+            <header class="dashboard-header">
+                <div class="header-left">
+                    <button
+                        class="sidebar-toggle"
+                        id="sidebarToggle"
+                        aria-label="Ouvrir le menu"
+                        aria-expanded="false"
+                        aria-controls="sidebar"
+                    >
+                        ☰
+                    </button>
+
+                    <div class="header-title">
+                        <h1>Nouvelle demande</h1>
+                        <p>Effectuez une demande de document administratif</p>
+                    </div>
+                </div>
+
+                <div class="header-right">
+                    <button
+                        class="notification-button"
+                        aria-label="Notifications"
+                    >
+                        ♧
+                        <span class="notification-dot"></span>
+                    </button>
+
+                    <div class="header-profile">
+                        <div class="profile-avatar">JD</div>
+
+                        <div class="profile-info">
+                            <span class="profile-name">Jean Dupont</span>
+                            <span class="profile-role">Citoyen</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- CONTENU -->
+            <section class="request-page-content">
+                <!-- INTRODUCTION -->
+                <div class="request-introduction">
+                    <div class="request-intro-icon">📄</div>
+
+                    <div>
+                        <h2>Faire une nouvelle demande</h2>
+
+                        <p>
+                            Remplissez les informations ci-dessous afin de
+                            soumettre votre demande de document administratif.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- BARRE DE PROGRESSION -->
+                <div class="request-progress-card">
+                    <div class="progress-header">
+                        <span class="progress-label">
+                            Étape <strong id="currentStep">1</strong> sur 3
+                        </span>
+
+                        <span
+                            class="progress-percentage"
+                            id="progressPercentage"
+                        >
+                            33%
+                        </span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div
+                            class="progress-bar-fill"
+                            id="progressBarFill"
+                        ></div>
+                    </div>
+
+                    <div class="progress-steps">
+                        <div class="progress-step active">
+                            <span class="step-number">1</span>
+                            <span>Informations</span>
+                        </div>
+
+                        <div class="progress-step">
+                            <span class="step-number">2</span>
+                            <span>Documents</span>
+                        </div>
+
+                        <div class="progress-step">
+                            <span class="step-number">3</span>
+                            <span>Confirmation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FORMULAIRE -->
+                <form id="requestForm" class="request-form">
+                    <!-- SECTION 1 -->
+                    <div class="form-section form-step active" id="step1">
+                        <div class="form-section-header">
+                            <div class="section-number">01</div>
+
+                            <div>
+                                <h3>Informations générales</h3>
+
+                                <p>
+                                    Sélectionnez la commune et le document
+                                    souhaité.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <!-- COMMUNE -->
+                            <div class="form-group">
+                                <label for="commune">
+                                    Commune de traitement
+                                    <span class="required">*</span>
+                                </label>
+
+                                <select id="commune" name="commune" required>
+                                    <option value="">
+                                        Sélectionnez votre commune
+                                    </option>
+
+                                    <option value="Gombe">Gombe</option>
+                                    <option value="Barumbu">Barumbu</option>
+                                    <option value="Kinshasa">Kinshasa</option>
+                                    <option value="Lingwala">Lingwala</option>
+                                    <option value="Kasa-Vubu">Kasa-Vubu</option>
+                                    <option value="Ngiri-Ngiri">
+                                        Ngiri-Ngiri
+                                    </option>
+                                    <option value="Kalamu">Kalamu</option>
+                                    <option value="Bandalungwa">
+                                        Bandalungwa
+                                    </option>
+                                    <option value="Selembao">Selembao</option>
+                                    <option value="Bumbu">Bumbu</option>
+                                    <option value="Makala">Makala</option>
+                                    <option value="Ngaba">Ngaba</option>
+                                    <option value="Lemba">Lemba</option>
+                                    <option value="Matete">Matete</option>
+                                    <option value="Limete">Limete</option>
+                                    <option value="Kisenso">Kisenso</option>
+                                    <option value="Mont-Ngafula">
+                                        Mont-Ngafula
+                                    </option>
+                                    <option value="Ndjili">Ndjili</option>
+                                    <option value="Kimbanseke">
+                                        Kimbanseke
+                                    </option>
+                                    <option value="Masina">Masina</option>
+                                    <option value="Nsele">Nsele</option>
+                                    <option value="Maluku">Maluku</option>
+                                    <option value="Ngaliema">Ngaliema</option>
+                                    <option value="Kintambo">Kintambo</option>
+                                </select>
+                            </div>
+
+                            <!-- TYPE DE DOCUMENT -->
+                            <div class="form-group">
+                                <label for="documentType">
+                                    Type de document
+                                    <span class="required">*</span>
+                                </label>
+
+                                <select
+                                    id="documentType"
+                                    name="documentType"
+                                    required
+                                >
+                                    <option value="">
+                                        Sélectionnez un document
+                                    </option>
+
+                                    <option
+                                        value="acte-naissance"
+                                        data-price="15000"
+                                    >
+                                        Acte de naissance
+                                    </option>
+
+                                    <option
+                                        value="attestation-residence"
+                                        data-price="10000"
+                                    >
+                                        Attestation de résidence
+                                    </option>
+
+                                    <option
+                                        value="certificat-celibat"
+                                        data-price="20000"
+                                    >
+                                        Certificat de célibat
+                                    </option>
+
+                                    <option
+                                        value="attestation-perte"
+                                        data-price="10000"
+                                    >
+                                        Attestation de perte
+                                    </option>
+
+                                    <option
+                                        value="certificat-vie"
+                                        data-price="10000"
+                                    >
+                                        Certificat de vie
+                                    </option>
+
+                                    <option
+                                        value="composition-familiale"
+                                        data-price="15000"
+                                    >
+                                        Attestation de composition familiale
+                                    </option>
+                                </select>
+                            </div>
+
+                            <!-- MOTIF -->
+                            <div class="form-group form-group-full">
+                                <label for="requestReason">
+                                    Motif de la demande
+                                    <span class="required">*</span>
+                                </label>
+
+                                <textarea
+                                    id="requestReason"
+                                    name="requestReason"
+                                    rows="4"
+                                    placeholder="Expliquez brièvement pourquoi vous avez besoin de ce document..."
+                                    required
+                                ></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 2 -->
+                    <div class="form-section form-step" id="step2">
+                        <div class="form-section-header">
+                            <div class="section-number">02</div>
+
+                            <div>
+                                <h3>Pièces justificatives</h3>
+
+                                <p>
+                                    Ajoutez les fichiers nécessaires au
+                                    traitement de votre demande.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="upload-information">
+                            <div class="upload-info-icon">ℹ</div>
+
+                            <p>
+                                Les fichiers acceptés sont PDF, JPG et PNG. La
+                                taille maximale autorisée est de 5 Mo par
+                                fichier.
+                            </p>
+                        </div>
+
+                        <div class="upload-area" id="uploadArea">
+                            <input
+                                type="file"
+                                id="supportingDocuments"
+                                name="supportingDocuments"
+                                accept=".pdf,.jpg,.jpeg,.png"
+                                multiple
+                                hidden
+                            />
+
+                            <div class="upload-icon">⇧</div>
+
+                            <h4>Ajouter vos pièces justificatives</h4>
+
+                            <p>
+                                Glissez vos fichiers ici ou cliquez pour
+                                parcourir
+                            </p>
+
+                            <button
+                                type="button"
+                                class="upload-button"
+                                id="uploadButton"
+                            >
+                                Choisir des fichiers
+                            </button>
+                        </div>
+
+                        <!-- LISTE DES FICHIERS -->
+                        <div class="uploaded-files" id="uploadedFiles"></div>
+
+                        <div class="form-group">
+                            <label for="additionalInformation">
+                                Informations supplémentaires
+                            </label>
+
+                            <textarea
+                                id="additionalInformation"
+                                name="additionalInformation"
+                                rows="3"
+                                placeholder="Ajoutez des informations complémentaires si nécessaire..."
+                            ></textarea>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 3 : RÉCAPITULATIF -->
+                    <div class="form-section form-step" id="step3">
+                        <div class="form-section-header">
+                            <div class="section-number">03</div>
+
+                            <div>
+                                <h3>Récapitulatif de la demande</h3>
+
+                                <p>
+                                    Vérifiez les informations avant de
+                                    continuer.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="request-summary">
+                            <div class="summary-row">
+                                <span>Commune</span>
+
+                                <strong id="summaryCommune">
+                                    Non sélectionnée
+                                </strong>
+                            </div>
+
+                            <div class="summary-row">
+                                <span>Document demandé</span>
+
+                                <strong id="summaryDocument">
+                                    Non sélectionné
+                                </strong>
+                            </div>
+
+                            <div class="summary-row">
+                                <span>Pièces jointes</span>
+
+                                <strong id="summaryFiles"> 0 fichier </strong>
+                            </div>
+
+                            <div class="summary-divider"></div>
+
+                            <div class="summary-total">
+                                <span>Frais estimatifs</span>
+
+                                <strong id="summaryPrice"> 0 FC </strong>
+                            </div>
+                        </div>
+
+                        <div class="payment-notice">
+                            <span class="notice-icon">ℹ</span>
+
+                            <p>
+                                Le paiement sera effectué après la validation
+                                des informations de votre demande.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- BOUTONS -->
+                    <!-- NAVIGATION ENTRE LES ÉTAPES -->
+
+                    <!-- ==========================================
+     MODAL DE CONFIRMATION
+========================================== -->
+
+                    <div class="success-overlay" id="successOverlay">
+                        <div class="success-modal">
+                            <div class="success-icon">✓</div>
+
+                            <h2>Demande enregistrée !</h2>
+
+                            <p class="success-message">
+                                Votre demande a été enregistrée avec succès.
+                                Vous pourrez suivre son évolution depuis votre
+                                espace citoyen.
+                            </p>
+
+                            <div class="reference-box">
+                                <span>Numéro de référence</span>
+
+                                <strong id="requestReference">
+                                    CC-KIN-2026-000001
+                                </strong>
+
+                                <button type="button" id="copyReference">
+                                    Copier la référence
+                                </button>
+                            </div>
+
+                            <div class="success-details">
+                                <div class="success-detail-row">
+                                    <span>Document</span>
+                                    <strong id="successDocument">-</strong>
+                                </div>
+
+                                <div class="success-detail-row">
+                                    <span>Commune</span>
+                                    <strong id="successCommune">-</strong>
+                                </div>
+
+                                <div class="success-detail-row">
+                                    <span>Frais estimatifs</span>
+                                    <strong id="successPrice">-</strong>
+                                </div>
+                            </div>
+
+                            <div class="success-actions">
+                                <a
+                                    href="tableau-de-bord.html"
+                                    class="success-dashboard-button"
+                                >
+                                    Retour au tableau de bord
+                                </a>
+
+                                <a
+                                    href="suivi-demandes.html"
+                                    class="success-follow-button"
+                                >
+                                    Suivre ma demande
+                                </a>
+                            </div>
+
+                            <p class="success-footer">
+                                Conservez votre numéro de référence pour le
+                                suivi.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button
+                            type="button"
+                            class="btn-cancel"
+                            id="previousStep"
+                            style="display: none"
+                        >
+                            ← Précédent
+                        </button>
+
+                        <a
+                            href="tableau-de-bord.html"
+                            class="btn-cancel"
+                            id="cancelRequest"
+                        >
+                            Annuler
+                        </a>
+
+                        <button type="button" class="btn-primary" id="nextStep">
+                            Suivant →
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="btn-primary"
+                            id="confirmRequest"
+                            formnovalidate
+                            style="display: none"
+                        >
+                            Confirmer la demande
+                        </button>
+                    </div>
+                </form>
+            </section>
+        </main>
+
+        <!-- JAVASCRIPT -->
+        <script src="../../js/pages/citoyen.js"></script>
+        <script src="../../js/pages/nouvelle-demande.js"></script>
+    </body>
+</html>

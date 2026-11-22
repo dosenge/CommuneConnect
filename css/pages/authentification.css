@@ -1,0 +1,432 @@
+/* ==========================================
+   AMÉLIORATION DES CHAMPS DE FORMULAIRE
+========================================== */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 9px;
+    color: #1f2937;
+}
+
+/* Inputs, selects et textarea */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px 16px;
+
+    font-size: 16px;
+    font-family: inherit;
+
+    color: #1f2937;
+    background-color: #ffffff;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+/* Placeholder */
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #9ca3af;
+    font-size: 15px;
+}
+
+/* Effet lorsque le champ est sélectionné */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #1646a3;
+    box-shadow: 0 0 0 4px rgba(22, 70, 163, 0.12);
+    background-color: #ffffff;
+}
+
+/* Champs désactivés */
+
+.form-group input:disabled,
+.form-group select:disabled {
+    background-color: #f3f4f6;
+    cursor: not-allowed;
+}
+
+/* Textarea */
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* ==========================================
+   GRILLE DES FORMULAIRES
+========================================== */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+}
+
+/* Évite le débordement des champs */
+
+.form-grid > * {
+    min-width: 0;
+}
+
+/* ==========================================
+   BOUTONS
+========================================== */
+
+.auth-form button,
+.register-btn {
+    min-height: 52px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+}
+
+/* ==========================================
+   RESPONSIVE TABLETTE
+========================================== */
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .form-group {
+        margin-bottom: 16px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        min-height: 54px;
+        font-size: 16px;
+        padding: 14px;
+    }
+
+    .form-group label {
+        font-size: 15px;
+    }
+}
+
+/* =========================================
+   CORRECTION ET AMÉLIORATION INSCRIPTION
+========================================= */
+
+.register-main {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: #f4f7fc;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.06);
+}
+
+/* EN TETE DU FORMULAIRE D'INSCRIPTION */
+
+.register-heading {
+    text-align: center;
+    margin-bottom: 0 auto 40px;
+    padding: 10px 15px 25px;
+}
+
+.register-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+    background: #eaf1ff;
+    color: #1646a3;
+    border-radius: 18px;
+    font-size: 28px;
+}
+
+.register-heading h1 {
+    font-size: 30px;
+    color: #1646a3;
+    margin-bottom: 12px;
+    line-height: 1.3em;
+    font-weight: 700;
+}
+
+.register-heading p {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.7;
+
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Sections */
+
+.form-section {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+}
+
+.form-section h2 {
+    font-size: 20px;
+    color: #1646a3;
+    margin-bottom: 8px;
+}
+
+.form-section > p {
+    color: #6b7280;
+    margin-bottom: 25px;
+}
+
+/* Grille */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px 25px;
+}
+
+/* Groupes */
+
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #263449;
+}
+
+/* Champs */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    height: 55px;
+    padding: 0 16px;
+
+    font-size: 16px;
+    font-family: inherit;
+    color: #263449;
+
+    background: #ffffff;
+    border: 1px solid #d5dce7;
+    border-radius: 10px;
+
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.form-group input::placeholder {
+    color: #9aa6b7;
+}
+
+/* Focus */
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #1646a3;
+    box-shadow: 0 0 0 4px rgba(22, 70, 163, 0.1);
+}
+
+/* Date */
+
+.form-group input[type='date'] {
+    cursor: pointer;
+}
+
+/* Checkbox */
+
+.form-group input[type='checkbox'] {
+    width: 18px;
+    height: 18px;
+}
+
+/* Bouton */
+
+.register-btn {
+    width: 100%;
+    height: 56px;
+    margin-top: 15px;
+
+    background: #1646a3;
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.register-btn:hover {
+    background: #10367e;
+    transform: translateY(-1px);
+}
+
+/* =========================================
+   TABLETTE
+========================================= */
+
+@media (max-width: 768px) {
+    .register-heading {
+        margin-bottom: 30px;
+        padding: 5px 10px 20px;
+    }
+    .register-icon {
+        width: 58px;
+        height: 58px;
+        font-size: 24px;
+        border-radius: 15px;
+    }
+    .register-main {
+        padding: 25px 15px;
+    }
+
+    .register-heading p {
+        font-size: 15px;
+    }
+
+    .register-container {
+        padding: 25px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .register-heading h1 {
+        font-size: 25px;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+    .register-main {
+        padding: 12px;
+    }
+
+    .register-container {
+        padding: 18px 14px;
+        border-radius: 14px;
+    }
+
+    .register-heading h1 {
+        font-size: 22px;
+    }
+
+    .register-heading p {
+        font-size: 14px;
+    }
+
+    .register-icon {
+        width: 53px;
+        height: 52px;
+        margin-bottom: 15px;
+    }
+    .form-section {
+        padding: 16px 12px;
+        margin-bottom: 20px;
+    }
+
+    .form-section h2 {
+        font-size: 18px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        height: 54px;
+        padding: 0 12px;
+        font-size: 16px;
+    }
+
+    .register-btn {
+        height: 54px;
+        font-size: 16px;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE TELEPHONE
+========================================== */
+
+@media (max-width: 480px) {
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        min-height: 56px;
+        padding: 15px 12px;
+        font-size: 16px;
+        border-radius: 9px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+
+    .form-grid {
+        gap: 8px;
+    }
+
+    .register-container {
+        padding: 18px;
+    }
+
+    .register-btn,
+    .auth-form button {
+        width: 100%;
+        min-height: 54px;
+    }
+}

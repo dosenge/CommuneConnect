@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Créer un compte | CommuneConnect</title>
+
+        <meta
+            name="description"
+            content="Créez votre compte citoyen CommuneConnect pour accéder aux services administratifs en ligne."
+        />
+
+        <link rel="stylesheet" href="../../css/reset.css" />
+        <link rel="stylesheet" href="../../css/variables.css" />
+        <link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/pages/authentification.css" />
+        <link rel="stylesheet" href="../../css/responsive.css" />
+    </head>
+
+    <body class="register-page">
+        <!-- HEADER -->
+
+        <header class="site-header">
+            <div class="header-container"></div>
+        </header>
+
+        <!-- MAIN -->
+
+        <main class="register-main">
+            <div class="register-container">
+                <!-- INTRODUCTION -->
+
+                <div class="register-heading">
+                    <div class="form-icon">👤</div>
+
+                    <h1>Créer votre compte citoyen</h1>
+
+                    <p>
+                        Remplissez les informations ci-dessous pour accéder aux
+                        services de votre commune.
+                    </p>
+                </div>
+
+                <!-- FORMULAIRE -->
+
+                <form id="registerForm">
+                    <!-- SECTION A -->
+
+                    <div class="form-section">
+                        <div class="form-section-heading">
+                            <span class="section-number">01</span>
+
+                            <div>
+                                <h3>Informations personnelles</h3>
+
+                                <p>Votre identité</p>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="nom">
+                                    Nom <span class="required">*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="nom"
+                                    name="nom"
+                                    placeholder="Votre nom"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="postnom">
+                                    Postnom <span class="required">*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="postnom"
+                                    name="postnom"
+                                    placeholder="Votre postnom"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="prenom">
+                                    Prénom <span class="required">*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="prenom"
+                                    name="prenom"
+                                    placeholder="Votre prénom"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sexe">
+                                    Sexe <span class="required">*</span>
+                                </label>
+
+                                <select id="sexe" name="sexe" required>
+                                    <option value="">Sélectionner</option>
+
+                                    <option value="masculin">Masculin</option>
+
+                                    <option value="feminin">Féminin</option>
+
+                                    <option value="autre">
+                                        Autre / Non précisé
+                                    </option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dateNaissance">
+                                    Date de naissance
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input
+                                    type="date"
+                                    id="dateNaissance"
+                                    name="dateNaissance"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="lieuNaissance">
+                                    Lieu de naissance
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="lieuNaissance"
+                                    name="lieuNaissance"
+                                    placeholder="Ville ou territoire"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION B -->
+
+                    <div class="form-section">
+                        <div class="form-section-heading">
+                            <span class="section-number">02</span>
+
+                            <div>
+                                <h3>Résidence et contact</h3>
+
+                                <p>Où vous joindre et vous localiser</p>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="commune">
+                                    Commune de résidence
+                                    <span class="required">*</span>
+                                </label>
+
+                                <select id="commune" name="commune" required>
+                                    <option value="">
+                                        Sélectionner votre commune
+                                    </option>
+
+                                    <option value="bandalungwa">
+                                        Bandalungwa
+                                    </option>
+
+                                    <option value="barumbu">Barumbu</option>
+
+                                    <option value="bumbu">Bumbu</option>
+
+                                    <option value="gombe">Gombe</option>
+
+                                    <option value="kalamu">Kalamu</option>
+
+                                    <option value="kinshasa">Kinshasa</option>
+
+                                    <option value="kasa-vubu">Kasa-Vubu</option>
+
+                                    <option value="kimbanseke">
+                                        Kimbanseke
+                                    </option>
+
+                                    <option value="kinsenso">Kinsenso</option>
+
+                                    <option value="lemba">Lemba</option>
+
+                                    <option value="limete">Limete</option>
+
+                                    <option value="lingwala">Lingwala</option>
+
+                                    <option value="makala">Makala</option>
+
+                                    <option value="maluku">Maluku</option>
+
+                                    <option value="masina">Masina</option>
+
+                                    <option value="matete">Matete</option>
+
+                                    <option value="mont-ngafula">
+                                        Mont-Ngafula
+                                    </option>
+
+                                    <option value="ndjili">Ndjili</option>
+
+                                    <option value="ngaba">Ngaba</option>
+
+                                    <option value="ngaliema">Ngaliema</option>
+
+                                    <option value="ngiri-ngiri">
+                                        Ngiri-Ngiri
+                                    </option>
+
+                                    <option value="nsele">Nsele</option>
+
+                                    <option value="selembao">Selembao</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="quartier">
+                                    Quartier
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="quartier"
+                                    name="quartier"
+                                    placeholder="Nom de votre quartier"
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group full-width">
+                                <label for="adresse"> Adresse </label>
+
+                                <input
+                                    type="text"
+                                    id="adresse"
+                                    name="adresse"
+                                    placeholder="Avenue, numéro, référence..."
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telephone">
+                                    Téléphone
+                                    <span class="required">*</span>
+                                </label>
+
+                                <input
+                                    type="tel"
+                                    id="telephone"
+                                    name="telephone"
+                                    placeholder="+243..."
+                                    required
+                                />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email"> Adresse email </label>
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="exemple@email.com"
+                                />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION C -->
+
+                    <div class="form-section">
+                        <div class="form-section-heading">
+                            <span class="section-number">03</span>
+
+                            <div>
+                                <h3>Sécurité du compte</h3>
+
+                                <p>Protégez votre espace personnel</p>
+                            </div>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="registerPassword">
+                                    Mot de passe
+                                    <span class="required">*</span>
+                                </label>
+
+                                <div class="password-field">
+                                    <input
+                                        type="password"
+                                        id="registerPassword"
+                                        name="password"
+                                        placeholder="Minimum 8 caractères"
+                                        minlength="8"
+                                        required
+                                    />
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="registerPassword"
+                                    >
+                                        👁
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirmPassword">
+                                    Confirmer le mot de passe
+                                    <span class="required">*</span>
+                                </label>
+
+                                <div class="password-field">
+                                    <input
+                                        type="password"
+                                        id="confirmPassword"
+                                        name="confirmPassword"
+                                        placeholder="Confirmez votre mot de passe"
+                                        minlength="8"
+                                        required
+                                    />
+
+                                    <button
+                                        type="button"
+                                        class="password-toggle"
+                                        data-target="confirmPassword"
+                                    >
+                                        👁
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Conditions -->
+
+                        <div class="terms-group">
+                            <label>
+                                <input
+                                    type="checkbox"
+                                    id="acceptTerms"
+                                    required
+                                />
+
+                                <span>
+                                    J'accepte les conditions d'utilisation et la
+                                    politique de confidentialité de
+                                    CommuneConnect.
+                                </span>
+                            </label>
+                        </div>
+
+                        <!-- Message -->
+
+                        <div
+                            id="registerMessage"
+                            class="login-message"
+                            role="alert"
+                        ></div>
+
+                        <!-- Bouton -->
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary register-button"
+                        >
+                            Créer mon compte
+                        </button>
+                    </div>
+                </form>
+
+                <!-- CONNEXION -->
+
+                <div class="register-bottom">
+                    Vous avez déjà un compte ?
+
+                    <a href="connexion.html"> Connectez-vous </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+
+        <footer class="auth-footer">
+            <p>© 2026 CommuneConnect — Projet académique</p>
+
+            <p>Kinshasa — RDC</p>
+        </footer>
+
+        <script src="../../js/pages/inscription.js"></script>
+    </body>
+</html>
