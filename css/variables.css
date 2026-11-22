@@ -1,0 +1,39 @@
+:root {
+    /* Couleurs principales */
+
+    --primary-color: #1646a3;
+    --primary-dark: #10367e;
+    --primary-light: #eaf1ff;
+
+    /* Couleurs secondaires */
+
+    --secondary-color: #f0b429;
+    --success-color: #16803c;
+    --danger-color: #dc3545;
+
+    /* Couleurs neutres */
+
+    --white: #ffffff;
+    --black: #111827;
+
+    --text-color: #374151;
+    --text-light: #6b7280;
+
+    --background-color: #f8fafc;
+    --border-color: #e5e7eb;
+
+    /* Dimensions */
+
+    --container-width: 1200px;
+
+    /* Bordures */
+
+    --border-radius: 12px;
+    --border-radius-large: 20px;
+
+    /* Ombres */
+
+    --shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+
+    --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.1);
+}

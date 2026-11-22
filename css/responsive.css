@@ -1,0 +1,119 @@
+/* Tablettes */
+
+@media (max-width: 1000px) {
+    .navigation {
+        gap: 15px;
+    }
+
+    .hero-container {
+        gap: 35px;
+    }
+
+    .hero-content h2 {
+        font-size: 38px;
+    }
+
+    .services-grid,
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Téléphones */
+
+@media (max-width: 768px) {
+    .header-container {
+        min-height: 75px;
+    }
+
+    .navigation,
+    .header-actions {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero {
+        padding: 50px 0;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h2 {
+        font-size: 35px;
+    }
+
+    .hero-content > p {
+        font-size: 15px;
+    }
+
+    .hero-image {
+        height: 320px;
+    }
+
+    .hero-visual {
+        min-height: 320px;
+    }
+
+    .hero-info {
+        gap: 20px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .services-grid,
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+    }
+}
+
+/* Petits téléphones */
+
+@media (max-width: 480px) {
+    .hero-content h2 {
+        font-size: 30px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .hero-info {
+        flex-wrap: wrap;
+    }
+
+    .logo-text h1 {
+        font-size: 16px;
+    }
+
+    .logo-text span {
+        font-size: 10px;
+    }
+}
