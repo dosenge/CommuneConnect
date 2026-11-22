@@ -185,3 +185,162 @@
 .sidebar {
     z-index: 1000;
 }
+
+/* ==========================================
+   CORRECTION SIDEBAR - MES DOCUMENTS
+========================================== */
+
+.sidebar-navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 15px;
+}
+
+.sidebar-section-title {
+    display: block;
+    width: 100%;
+    font-size: 11px;
+    font-weight: 700;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 20px 0 10px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 9px;
+    color: #475569;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.25s ease;
+}
+
+.sidebar-link i {
+    width: 20px;
+    min-width: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.sidebar-link span {
+    display: inline-block;
+    flex: 1;
+}
+
+.sidebar-link:hover {
+    background: #f1f5f9;
+    color: var(--primary-color);
+}
+
+.sidebar-link.active {
+    background: #eff6ff;
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.sidebar-logout {
+    color: #dc2626;
+}
+
+.sidebar-logout:hover {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+/* Espacement des sections */
+.sidebar-navigation .sidebar-section-title:first-child {
+    margin-top: 5px;
+}
+
+.sidebar-navigation .sidebar-section-title:not(:first-child) {
+    margin-top: 25px;
+}
+
+/* Logo sidebar */
+
+.sidebar-logo {
+    padding: 20px;
+    border-bottom: 1px solid #e8edf3;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    background: var(--primary-color);
+    color: white;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.logo-text strong {
+    color: #1e293b;
+    font-size: 15px;
+}
+
+.logo-text small {
+    color: #64748b;
+    font-size: 11px;
+}
+
+/* Profil sidebar */
+
+.sidebar-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    border-bottom: 1px solid #e8edf3;
+}
+
+.user-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+    border-radius: 50%;
+    background: #eff6ff;
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.user-info strong {
+    font-size: 14px;
+    color: #1e293b;
+}
+
+.user-info span {
+    font-size: 12px;
+    color: #64748b;
+}

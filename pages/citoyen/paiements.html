@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Mes paiements | CommuneConnect</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/reset.css" />
+        <link rel="stylesheet" href="../../css/variables.css" />
+        <link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/components/sidebar.css" />
+        <link rel="stylesheet" href="../../css/pages/citoyen.css" />
+        <link rel="stylesheet" href="../../css/responsive.css" />
+
+        <!-- Font Awesome -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+    </head>
+
+    <body>
+        <div class="dashboard-layout">
+            <!-- =========================================
+         SIDEBAR
+    ========================================== -->
+
+            <aside class="sidebar" id="sidebar">
+                <!-- LOGO -->
+                <div class="sidebar-logo">
+                    <a href="../../index.html" class="logo-link">
+                        <span class="logo-icon">CC</span>
+
+                        <div class="logo-text">
+                            <strong>CommuneConnect</strong>
+                            <small>Services communaux numériques</small>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- UTILISATEUR -->
+                <div class="sidebar-user">
+                    <div class="user-avatar">JD</div>
+
+                    <div class="user-info">
+                        <strong>Jean Dupont</strong>
+                        <span>Citoyen</span>
+                    </div>
+                </div>
+
+                <!-- NAVIGATION -->
+                <nav class="sidebar-navigation">
+                    <span class="sidebar-section-title"> Menu principal </span>
+
+                    <a href="tableau-de-bord.html" class="sidebar-link">
+                        <i class="fas fa-home"></i>
+                        <span>Tableau de bord</span>
+                    </a>
+
+                    <a href="nouvelle-demande.html" class="sidebar-link">
+                        <i class="fas fa-file-circle-plus"></i>
+                        <span>Nouvelle demande</span>
+                    </a>
+
+                    <a href="suivi-demandes.html" class="sidebar-link">
+                        <i class="fas fa-list-check"></i>
+                        <span>Mes demandes</span>
+                    </a>
+
+                    <a href="mes-documents.html" class="sidebar-link">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Mes documents</span>
+                    </a>
+
+                    <a href="paiements.html" class="sidebar-link active">
+                        <i class="fas fa-wallet"></i>
+                        <span>Mes paiements</span>
+                    </a>
+
+                    <span class="sidebar-section-title"> Mon compte </span>
+
+                    <a href="profil.html" class="sidebar-link">
+                        <i class="fas fa-user"></i>
+                        <span>Mon profil</span>
+                    </a>
+
+                    <a
+                        href="../../index.html"
+                        class="sidebar-link sidebar-logout"
+                    >
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Déconnexion</span>
+                    </a>
+                </nav>
+
+                <!-- FOOTER SIDEBAR -->
+                <div class="sidebar-footer">
+                    <p>© 2026 CommuneConnect</p>
+                </div>
+            </aside>
+
+            <!-- =========================================
+         CONTENU PRINCIPAL
+    ========================================== -->
+
+            <main class="dashboard-main">
+                <!-- HEADER -->
+                <header class="dashboard-header">
+                    <div class="header-left">
+                        <button
+                            class="sidebar-toggle"
+                            id="sidebarToggle"
+                            aria-label="Ouvrir le menu"
+                        >
+                            <i class="fas fa-bars"></i>
+                        </button>
+
+                        <div class="header-title">
+                            <h1>Mes paiements</h1>
+
+                            <p>
+                                Consultez vos transactions et frais
+                                administratifs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="header-right">
+                        <div class="header-profile">
+                            <div class="profile-avatar">JD</div>
+
+                            <div class="profile-info">
+                                <strong>Jean Dupont</strong>
+                                <span>Citoyen</span>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- =====================================
+             PAGE CONTENT
+        ====================================== -->
+
+                <section class="citizen-content payments-page-content">
+                    <!-- INTRODUCTION -->
+                    <div class="payments-introduction">
+                        <div>
+                            <h2>Gestion de mes paiements</h2>
+
+                            <p>
+                                Retrouvez l'historique de vos paiements liés à
+                                vos demandes administratives.
+                            </p>
+                        </div>
+
+                        <div class="payment-security-info">
+                            <i class="fas fa-shield-halved"></i>
+
+                            <span> Espace sécurisé </span>
+                        </div>
+                    </div>
+
+                    <!-- =================================
+                 STATISTIQUES
+            ================================== -->
+
+                    <div class="payments-statistics">
+                        <!-- TOTAL PAYÉ -->
+                        <div class="payment-stat-card">
+                            <div class="payment-stat-icon total-paid-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+
+                            <div class="payment-stat-info">
+                                <span>Total payé</span>
+                                <strong id="totalPaid"> 45 000 FC </strong>
+                            </div>
+                        </div>
+
+                        <!-- EN ATTENTE -->
+                        <div class="payment-stat-card">
+                            <div class="payment-stat-icon pending-payment-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+
+                            <div class="payment-stat-info">
+                                <span>En attente</span>
+                                <strong id="totalPending"> 10 000 FC </strong>
+                            </div>
+                        </div>
+
+                        <!-- TRANSACTIONS -->
+                        <div class="payment-stat-card">
+                            <div class="payment-stat-icon transactions-icon">
+                                <i class="fas fa-receipt"></i>
+                            </div>
+
+                            <div class="payment-stat-info">
+                                <span>Transactions</span>
+                                <strong id="totalTransactions"> 04 </strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- =================================
+                 FILTRES
+            ================================== -->
+
+                    <div class="payments-filter-card">
+                        <div class="payments-filter-header">
+                            <h3>Rechercher une transaction</h3>
+                        </div>
+
+                        <div class="payments-filters">
+                            <!-- RECHERCHE -->
+                            <div class="payments-search-box">
+                                <i
+                                    class="fas fa-search payments-search-icon"
+                                ></i>
+
+                                <input
+                                    type="search"
+                                    id="paymentSearch"
+                                    placeholder="Référence, document ou transaction..."
+                                />
+                            </div>
+
+                            <!-- STATUT -->
+                            <select id="paymentStatusFilter">
+                                <option value="all">Tous les statuts</option>
+
+                                <option value="paid">Payé</option>
+
+                                <option value="pending">En attente</option>
+
+                                <option value="failed">Échoué</option>
+                            </select>
+
+                            <!-- MODE DE PAIEMENT -->
+                            <select id="paymentMethodFilter">
+                                <option value="all">Tous les moyens</option>
+
+                                <option value="mpesa">M-Pesa</option>
+
+                                <option value="airtel">Airtel Money</option>
+
+                                <option value="orange">Orange Money</option>
+
+                                <option value="card">Carte bancaire</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- =================================
+                 HISTORIQUE
+            ================================== -->
+
+                    <div class="payments-history-section">
+                        <div class="payments-history-header">
+                            <h3>Historique des transactions</h3>
+
+                            <span id="paymentsCount"> 4 transactions </span>
+                        </div>
+
+                        <!-- TABLEAU -->
+                        <div class="payments-table-container">
+                            <div class="payments-table-wrapper">
+                                <table class="payments-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Référence</th>
+                                            <th>Document</th>
+                                            <th>Date</th>
+                                            <th>Moyen de paiement</th>
+                                            <th>Montant</th>
+                                            <th>Statut</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody id="paymentsTableBody">
+                                        <!-- JavaScript -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- ÉTAT VIDE -->
+                            <div class="payments-empty" id="paymentsEmpty">
+                                <div class="payments-empty-icon">
+                                    <i class="fas fa-receipt"></i>
+                                </div>
+
+                                <h3>Aucune transaction trouvée</h3>
+
+                                <p>
+                                    Aucune transaction ne correspond à votre
+                                    recherche.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- PAGINATION -->
+                        <div class="payments-pagination">
+                            <span id="paymentsPageInformation">
+                                Page 1 sur 1
+                            </span>
+
+                            <div class="payments-pagination-buttons">
+                                <button
+                                    type="button"
+                                    id="paymentsPreviousPage"
+                                    disabled
+                                >
+                                    <i class="fas fa-chevron-left"></i>
+                                    Précédent
+                                </button>
+
+                                <button type="button" id="paymentsNextPage">
+                                    Suivant
+                                    <i class="fas fa-chevron-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- =========================================
+     MODAL DÉTAILS TRANSACTION
+========================================== -->
+
+        <div class="payment-details-overlay" id="paymentDetailsOverlay">
+            <div class="payment-details-modal">
+                <div class="payment-modal-header">
+                    <h2>Détails du paiement</h2>
+
+                    <button
+                        type="button"
+                        class="payment-modal-close"
+                        id="closePaymentDetails"
+                        aria-label="Fermer"
+                    >
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="payment-details-content" id="paymentDetailsContent">
+                    <!-- JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================
+     JAVASCRIPT
+========================================== -->
+
+        <script src="../../js/pages/citoyen.js"></script>
+        <script src="../../js/pages/paiements.js"></script>
+    </body>
+</html>

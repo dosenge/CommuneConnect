@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Mes documents | CommuneConnect</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/reset.css" />
+        <link rel="stylesheet" href="../../css/variables.css" />
+        <link rel="stylesheet" href="../../css/main.css" />
+        <link rel="stylesheet" href="../../css/components/sidebar.css" />
+        <link rel="stylesheet" href="../../css/pages/citoyen.css" />
+        <link rel="stylesheet" href="../../css/responsive.css" />
+
+        <!-- Icônes -->
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        />
+    </head>
+
+    <body>
+        <div class="dashboard-layout">
+            <!-- SIDEBAR -->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-logo">
+                    <a href="../../index.html" class="logo-link">
+                        <span class="logo-icon">CC</span>
+
+                        <div class="logo-text">
+                            <strong>CommuneConnect</strong>
+                            <small>Services communaux numériques</small>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="sidebar-user">
+                    <div class="user-avatar">JD</div>
+
+                    <div class="user-info">
+                        <strong>Jean Dupont</strong>
+                        <span>Citoyen</span>
+                    </div>
+                </div>
+
+                <nav class="sidebar-navigation">
+                    <span class="sidebar-section-title">MENU PRINCIPAL</span>
+
+                    <a href="tableau-de-bord.html" class="sidebar-link">
+                        <i class="fas fa-home"></i>
+                        <span>Tableau de bord</span>
+                    </a>
+
+                    <a href="nouvelle-demande.html" class="sidebar-link">
+                        <i class="fas fa-file-circle-plus"></i>
+                        <span>Nouvelle demande</span>
+                    </a>
+
+                    <a href="suivi-demandes.html" class="sidebar-link">
+                        <i class="fas fa-list-check"></i>
+                        <span>Mes demandes</span>
+                    </a>
+
+                    <a href="mes-documents.html" class="sidebar-link active">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Mes documents</span>
+                    </a>
+
+                    <a href="paiements.html" class="sidebar-link">
+                        <i class="fas fa-wallet"></i>
+                        <span>Mes paiements</span>
+                    </a>
+
+                    <span class="sidebar-section-title">MON COMPTE</span>
+
+                    <a href="profil.html" class="sidebar-link">
+                        <i class="fas fa-user"></i>
+                        <span>Mon profil</span>
+                    </a>
+
+                    <a
+                        href="../../index.html"
+                        class="sidebar-link sidebar-logout"
+                    >
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Déconnexion</span>
+                    </a>
+                </nav>
+
+                <div class="sidebar-footer">
+                    <p>© 2026 CommuneConnect</p>
+                </div>
+            </aside>
+
+            <!-- CONTENU PRINCIPAL -->
+            <main class="dashboard-main">
+                <!-- HEADER -->
+                <header class="dashboard-header">
+                    <div class="header-left">
+                        <button class="sidebar-toggle" id="sidebarToggle">
+                            <i class="fas fa-bars"></i>
+                        </button>
+
+                        <div class="header-title">
+                            <h1>Mes documents</h1>
+                            <p>
+                                Consultez et téléchargez vos documents
+                                administratifs.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="header-right">
+                        <div class="header-profile">
+                            <div class="profile-avatar">JD</div>
+
+                            <div class="profile-info">
+                                <strong>Jean Dupont</strong>
+                                <span>Citoyen</span>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- PAGE CONTENT -->
+                <section class="citizen-content documents-page-content">
+                    <!-- INTRODUCTION -->
+                    <div class="documents-introduction">
+                        <div>
+                            <h2>Mon espace documentaire</h2>
+
+                            <p>
+                                Retrouvez ici vos documents administratifs
+                                délivrés par votre commune.
+                            </p>
+                        </div>
+
+                        <a
+                            href="nouvelle-demande.html"
+                            class="new-document-request"
+                        >
+                            <i class="fas fa-plus"></i>
+                            Nouvelle demande
+                        </a>
+                    </div>
+
+                    <!-- STATISTIQUES -->
+                    <div class="documents-statistics">
+                        <div class="document-stat-card">
+                            <div
+                                class="document-stat-icon documents-total-icon"
+                            >
+                                <i class="fas fa-folder"></i>
+                            </div>
+
+                            <div class="document-stat-info">
+                                <span>Total documents</span>
+                                <strong>04</strong>
+                            </div>
+                        </div>
+
+                        <div class="document-stat-card">
+                            <div
+                                class="document-stat-icon documents-available-icon"
+                            >
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+
+                            <div class="document-stat-info">
+                                <span>Disponibles</span>
+                                <strong>03</strong>
+                            </div>
+                        </div>
+
+                        <div class="document-stat-card">
+                            <div
+                                class="document-stat-icon documents-expired-icon"
+                            >
+                                <i class="fas fa-clock"></i>
+                            </div>
+
+                            <div class="document-stat-info">
+                                <span>Expirés</span>
+                                <strong>01</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FILTRES -->
+                    <div class="documents-filter-card">
+                        <div class="documents-filter-header">
+                            <h3>Rechercher un document</h3>
+                        </div>
+
+                        <div class="documents-filters">
+                            <div class="documents-search-box">
+                                <i
+                                    class="fas fa-search documents-search-icon"
+                                ></i>
+
+                                <input
+                                    type="search"
+                                    id="documentSearch"
+                                    placeholder="Nom du document, référence..."
+                                />
+                            </div>
+
+                            <select id="documentStatusFilter">
+                                <option value="all">Tous les statuts</option>
+                                <option value="available">Disponible</option>
+                                <option value="expired">Expiré</option>
+                            </select>
+
+                            <select id="documentCommuneFilter">
+                                <option value="all">Toutes les communes</option>
+                                <option value="Gombe">Gombe</option>
+                                <option value="Lemba">Lemba</option>
+                                <option value="Matete">Matete</option>
+                                <option value="Ngaliema">Ngaliema</option>
+                                <option value="Kinshasa">Kinshasa</option>
+                                <option value="Bandalungwa">Bandalungwa</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- DOCUMENTS -->
+                    <div class="documents-section">
+                        <div class="documents-section-header">
+                            <h3>Mes documents délivrés</h3>
+
+                            <span id="documentsCount"> 4 documents </span>
+                        </div>
+
+                        <div class="documents-grid" id="documentsGrid">
+                            <!-- Les documents seront générés par JavaScript -->
+                        </div>
+
+                        <!-- ÉTAT VIDE -->
+                        <div class="documents-empty" id="documentsEmpty">
+                            <div class="documents-empty-icon">
+                                <i class="fas fa-folder-open"></i>
+                            </div>
+
+                            <h3>Aucun document trouvé</h3>
+
+                            <p>
+                                Aucun document ne correspond à votre recherche.
+                            </p>
+
+                            <a href="nouvelle-demande.html">
+                                Effectuer une demande
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- MODAL DOCUMENT -->
+        <div class="document-modal-overlay" id="documentModal">
+            <div class="document-modal">
+                <div class="document-modal-header">
+                    <h2>Détails du document</h2>
+
+                    <button
+                        id="closeDocumentModal"
+                        class="document-modal-close"
+                    >
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+
+                <div class="document-modal-content" id="documentModalContent">
+                    <!-- Contenu dynamique -->
+                </div>
+            </div>
+        </div>
+
+        <!-- JS -->
+        <script src="../../js/components/sidebar.js"></script>
+        <script src="../../js/pages/citoyen.js"></script>
+        <script src="../../js/pages/mes-documents.js"></script>
+    </body>
+</html>
