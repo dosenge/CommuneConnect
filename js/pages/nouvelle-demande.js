@@ -37,12 +37,12 @@ const progressSteps = document.querySelectorAll('.progress-step');
 // ==========================================
 
 const documentPrices = {
-    'acte-naissance': 15000,
-    'attestation-residence': 10000,
+    'acte-naissance': 23000,
+    'attestation-residence': 23000,
     'certificat-celibat': 20000,
-    'attestation-perte': 10000,
-    'certificat-vie': 10000,
-    'composition-familiale': 15000,
+    'attestation-perte': 23000,
+    'certificat-vie': 23000,
+    'composition-familiale': 20000,
 };
 
 // ==========================================

@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Détails de la demande | CommuneConnect</title>
+
+        <link rel="stylesheet" href="../../css/style.css" />
+        <link rel="stylesheet" href="../../css/pages/admin.css" />
+    </head>
+
+    <body class="admin-page">
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar">
+            <div class="admin-logo">
+                <div class="admin-logo-icon">CC</div>
+
+                <div class="admin-logo-text">
+                    <h2>CommuneConnect</h2>
+                    <span>Administration</span>
+                </div>
+            </div>
+
+            <nav class="admin-navigation">
+                <p class="admin-nav-title">MENU PRINCIPAL</p>
+
+                <a href="tableau-de-bord.html" class="admin-nav-link">
+                    <span>🏠</span>
+                    <span>Tableau de bord</span>
+                </a>
+
+                <a href="demandes.html" class="admin-nav-link active">
+                    <span>📋</span>
+                    <span>Gestion des demandes</span>
+                </a>
+
+                <a href="citoyens.html" class="admin-nav-link">
+                    <span>👥</span>
+                    <span>Citoyens</span>
+                </a>
+
+                <a href="documents.html" class="admin-nav-link">
+                    <span>📄</span>
+                    <span>Documents administratifs</span>
+                </a>
+
+                <p class="admin-nav-title">AUTRES</p>
+
+                <a href="parametres.html" class="admin-nav-link">
+                    <span>⚙️</span>
+                    <span>Paramètres</span>
+                </a>
+            </nav>
+
+            <div class="admin-sidebar-bottom">
+                <div class="admin-user">
+                    <div class="admin-user-avatar">AD</div>
+
+                    <div class="admin-user-info">
+                        <strong>Administrateur</strong>
+                        <span>Admin communal</span>
+                    </div>
+                </div>
+
+                <a href="../../index.html" class="admin-logout">
+                    <span>🚪</span>
+                    Déconnexion
+                </a>
+            </div>
+        </aside>
+
+        <!-- CONTENU PRINCIPAL -->
+        <main class="admin-main">
+            <!-- HEADER -->
+            <header class="admin-header">
+                <div class="admin-header-left">
+                    <button class="admin-menu-button" id="adminMenuButton">
+                        ☰
+                    </button>
+
+                    <div>
+                        <h1>Détails de la demande</h1>
+                        <p>
+                            Consultation et traitement d'une demande
+                            administrative.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="admin-header-right">
+                    <button class="admin-notification-button">
+                        🔔
+                        <span class="notification-badge">3</span>
+                    </button>
+
+                    <div class="admin-header-profile">
+                        <div class="admin-user-avatar">AD</div>
+
+                        <div>
+                            <strong>Administrateur</strong>
+                            <span>Administration communale</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- CONTENU -->
+            <section class="admin-content">
+                <!-- RETOUR -->
+                <a href="demandes.html" class="admin-back-link">
+                    ← Retour aux demandes
+                </a>
+
+                <!-- EN-TETE DEMANDE -->
+                <div class="admin-detail-heading">
+                    <div>
+                        <h2>Demande CC-2026-001</h2>
+
+                        <p>Soumise le 20 novembre 2026</p>
+                    </div>
+
+                    <span class="status-badge pending"> En attente </span>
+                </div>
+
+                <!-- INFORMATIONS PRINCIPALES -->
+                <div class="admin-detail-grid">
+                    <!-- INFORMATIONS CITOYEN -->
+                    <div class="admin-section">
+                        <div class="admin-section-header">
+                            <div>
+                                <h2>Informations du citoyen</h2>
+                                <p>Identité du demandeur</p>
+                            </div>
+                        </div>
+
+                        <div class="admin-citizen-profile">
+                            <div class="admin-citizen-avatar">JM</div>
+
+                            <div>
+                                <h3>Jean Mukendi</h3>
+                                <p>Citoyen</p>
+                            </div>
+                        </div>
+
+                        <div class="admin-detail-list">
+                            <div class="admin-detail-item">
+                                <span>Nom complet</span>
+                                <strong>Jean Mukendi</strong>
+                            </div>
+
+                            <div class="admin-detail-item">
+                                <span>Adresse e-mail</span>
+                                <strong>jean.mukendi@email.com</strong>
+                            </div>
+
+                            <div class="admin-detail-item">
+                                <span>Téléphone</span>
+                                <strong>+243 812 345 678</strong>
+                            </div>
+
+                            <div class="admin-detail-item">
+                                <span>Commune</span>
+                                <strong>Gombe</strong>
+                            </div>
+
+                            <div class="admin-detail-item">
+                                <span>Adresse</span>
+                                <strong>Kinshasa, Gombe</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- INFORMATIONS DEMANDE -->
+                    <div class="admin-section">
+                        <div class="admin-section-header">
+                            <div>
+                                <h2>Informations de la demande</h2>
+                                <p>Détails du document sollicité</p>
+                            </div>
+                        </div>
+
+                        <div class="admin-detail-list">
+                            <div class="admin-detail-item">
+                                <span>Référence</span>
+                                <strong>CC-2026-001</strong>
+                            </div>
+
+                            <div class="admin-detail-item">
+                                <span>Document demandé</span>
+                                <strong>Attestation de résidence</strong>
+                            </div>
+
+                            <div class="admin-detail-item">
+                                <span>Date de soumission</span>
+                                <strong>20 novembre 2026</strong>
+                            </div>
+
+                            <div class="admin-detail-item">
+                                <span>Statut actuel</span>
+                                <strong>
+                                    <span class="status-badge pending">
+                                        En attente
+                                    </span>
+                                </strong>
+                            </div>
+
+                            <div class="admin-detail-item">
+                                <span>Frais administratifs</span>
+                                <strong>15 000 FC</strong>
+                            </div>
+
+                            <div class="admin-detail-item">
+                                <span>État du paiement</span>
+                                <strong class="payment-status unpaid">
+                                    Non payé
+                                </strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MOTIF DE LA DEMANDE -->
+                <div class="admin-section">
+                    <div class="admin-section-header">
+                        <div>
+                            <h2>Motif de la demande</h2>
+                            <p>Informations communiquées par le citoyen</p>
+                        </div>
+                    </div>
+
+                    <div class="admin-request-reason">
+                        <p>
+                            Je sollicite une attestation de résidence dans le
+                            cadre de mes démarches administratives et
+                            professionnelles.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- PIECES JUSTIFICATIVES -->
+                <div class="admin-section">
+                    <div class="admin-section-header">
+                        <div>
+                            <h2>Pièces justificatives</h2>
+                            <p>Documents transmis par le citoyen</p>
+                        </div>
+                    </div>
+
+                    <div class="admin-document-list">
+                        <div class="admin-document-item">
+                            <div class="admin-document-icon">📄</div>
+
+                            <div class="admin-document-info">
+                                <strong>Carte d'identité</strong>
+                                <span>PDF · 1,2 Mo</span>
+                            </div>
+
+                            <a href="#" class="admin-document-button">
+                                Visualiser
+                            </a>
+                        </div>
+
+                        <div class="admin-document-item">
+                            <div class="admin-document-icon">📄</div>
+
+                            <div class="admin-document-info">
+                                <strong>Justificatif de domicile</strong>
+                                <span>PDF · 850 Ko</span>
+                            </div>
+
+                            <a href="#" class="admin-document-button">
+                                Visualiser
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HISTORIQUE -->
+                <div class="admin-section">
+                    <div class="admin-section-header">
+                        <div>
+                            <h2>Historique de la demande</h2>
+                            <p>Suivi des différentes étapes</p>
+                        </div>
+                    </div>
+
+                    <div class="admin-timeline">
+                        <div class="admin-timeline-item completed">
+                            <div class="admin-timeline-marker"></div>
+
+                            <div class="admin-timeline-content">
+                                <strong>Demande soumise</strong>
+                                <p>Le citoyen a envoyé sa demande.</p>
+                                <span>20 novembre 2026 · 09:15</span>
+                            </div>
+                        </div>
+
+                        <div class="admin-timeline-item current">
+                            <div class="admin-timeline-marker"></div>
+
+                            <div class="admin-timeline-content">
+                                <strong>En attente de vérification</strong>
+                                <p>
+                                    La demande attend l'examen de
+                                    l'administration.
+                                </p>
+                                <span>20 novembre 2026 · 09:15</span>
+                            </div>
+                        </div>
+
+                        <div class="admin-timeline-item">
+                            <div class="admin-timeline-marker"></div>
+
+                            <div class="admin-timeline-content">
+                                <strong>Décision administrative</strong>
+                                <p>En attente de validation ou de rejet.</p>
+                            </div>
+                        </div>
+
+                        <div class="admin-timeline-item">
+                            <div class="admin-timeline-marker"></div>
+
+                            <div class="admin-timeline-content">
+                                <strong>Document délivré</strong>
+                                <p>
+                                    Cette étape sera complétée après validation.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ACTIONS ADMINISTRATEUR -->
+                <div class="admin-section admin-decision-section">
+                    <div class="admin-section-header">
+                        <div>
+                            <h2>Décision administrative</h2>
+                            <p>Actions disponibles pour cette demande</p>
+                        </div>
+                    </div>
+
+                    <div class="admin-decision-form">
+                        <label for="adminDecisionComment">
+                            Commentaire ou motif (facultatif)
+                        </label>
+
+                        <textarea
+                            id="adminDecisionComment"
+                            rows="4"
+                            placeholder="Ajouter un commentaire ou un motif de rejet..."
+                        ></textarea>
+
+                        <div class="admin-decision-buttons">
+                            <button
+                                type="button"
+                                class="admin-decision-button processing-button"
+                                id="btnProcessing"
+                            >
+                                ⏳ Mettre en traitement
+                            </button>
+
+                            <button
+                                type="button"
+                                class="admin-decision-button reject-button"
+                                id="btnReject"
+                            >
+                                ❌ Rejeter la demande
+                            </button>
+
+                            <button
+                                type="button"
+                                class="admin-decision-button approve-button"
+                                id="btnApprove"
+                            >
+                                ✅ Approuver la demande
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- MODALE DE CONFIRMATION -->
+        <div class="admin-confirm-overlay" id="adminConfirmOverlay">
+            <div class="admin-confirm-modal">
+                <div class="admin-confirm-icon" id="adminConfirmIcon">⚠️</div>
+
+                <h2 id="adminConfirmTitle">Confirmer l'action</h2>
+
+                <p id="adminConfirmMessage">
+                    Voulez-vous confirmer cette action ?
+                </p>
+
+                <div class="admin-confirm-buttons">
+                    <button
+                        type="button"
+                        id="adminConfirmCancel"
+                        class="admin-confirm-cancel"
+                    >
+                        Annuler
+                    </button>
+
+                    <button
+                        type="button"
+                        id="adminConfirmAction"
+                        class="admin-confirm-action"
+                    >
+                        Confirmer
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- MESSAGE -->
+        <div class="admin-toast" id="adminToast"></div>
+
+        <script src="../../js/admin.js"></script>
+    </body>
+</html>

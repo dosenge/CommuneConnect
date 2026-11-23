@@ -12,7 +12,7 @@ const payments = [
         requestReference: 'CC-KIN-2026-000115',
         date: '2026-11-15',
         method: 'mpesa',
-        amount: 15000,
+        amount: 23000,
         status: 'paid',
     },
     {
@@ -34,7 +34,7 @@ const payments = [
         requestReference: 'CC-KIN-2026-000099',
         date: '2026-11-10',
         method: 'orange',
-        amount: 20000,
+        amount: 23000,
         status: 'paid',
     },
     {
@@ -45,7 +45,7 @@ const payments = [
         requestReference: 'CC-KIN-2026-000120',
         date: '2026-11-20',
         method: 'mpesa',
-        amount: 10000,
+        amount: 23000,
         status: 'pending',
     },
 ];
